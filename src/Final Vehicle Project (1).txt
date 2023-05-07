@@ -1,0 +1,2200 @@
+package Vehicle;
+import java.util.*;
+
+//Inheritance - single level inheritance
+public class Vehicle extends Object {
+	
+//static block	
+         static
+           {
+	        System.out.println("welcome to  the showroom!!");
+	        System.out.println("-------------------------------------");
+	        System.out.println("Please choose desired option:");
+	        System.out.println("  ");
+           }
+
+//main method
+	    public static void main(String[] args) {
+		
+		System.out.println("Two Wheeler || Three Wheeler || Four Wheeler");
+		
+		Scanner s = new Scanner(System.in);
+		String inp= s.nextLine();
+		System.out.println("  ");
+		System.out.println("Preference : "+inp);
+		System.out.println("  ");
+		System.out.println("Please select Vehicle Type");
+	
+//switch
+		switch(inp) {
+		case "Two Wheeler" : System.out.println("Cycle || Bikes || Scooter");
+		                     break;
+		case "Three Wheeler" : System.out.println("Auto-Rikshaw");
+		                     break;
+		case "Four Wheeler" : System.out.println("Petrol || Diesel || EV");
+		                     break;
+		default:System.out.println("Please visit showroom!!");
+		}
+		 
+	
+		System.out.println(" ");
+		String inp1= s.nextLine();
+		System.out.println("   ");
+		System.out.println("Selected : "+inp1);
+	       	 
+//object creation 
+			  Vehicle v = new Vehicle();
+			    Cycle c = new Cycle();
+			    Bikes b = new Bikes();
+			 Scooter sc = new Scooter();
+			     Auto a = new Auto();
+			   Petrol p = new Petrol();
+			   Diesel d = new Diesel();
+			       EV e = new EV();
+			 
+//switch		 
+			 switch (inp1) {
+		     case "Cycle"        :c.cycleModel();
+		                          break;
+		     case "Bikes"        :b.bikeModel();
+		                          break;
+		     case "Scooter"      :sc.scooterModel();
+		                          break;
+		     case "Auto-Rikshaw" :a.autoModel();
+		    	                  break;
+		     case "Petrol"       :p.petrolModel();
+		    	                  break;
+		     case "Diesel"       :d.dieselModel();
+		    	                  break;
+		     case "EV"           :e.evModel();
+		    	                  break;
+		     default             :System.out.println("Please visit Showroom for other vehicles");
+		    	          }
+			 
+			 System.out.println(" ");
+			 
+			 System.out.println("If interested in Test Drive, please enter YES Otherwise enter 0 !!");
+			 String inp4=s.nextLine();
+			 System.out.println(" ");
+			
+//switch			 
+			 switch (inp4) { 
+			 case "YES" : TestDrive("YES");
+			              break;
+			 case "0"   : TestDrive(0);
+			              break;
+			 }
+			 
+			 System.out.println(" ");
+			 System.out.println("Please seelct payment process : Cash || EMI");
+		
+			 System.out.println(v);
+			
+			 
+			 System.out.println(" ");
+			 System.out.println("Thank you for visiting our showroom, please visit again!!!");
+			
+	}
+	    
+//Method overriding- toStringI();	    
+	 public String toString() {
+	 Scanner s13=new Scanner(System.in);
+	 String inp15=s13.nextLine();
+	 System.out.println(" ");
+	
+//switch	
+	 switch(inp15) {
+	 case "Cash" : System.out.println("Please visit showroom for payment process!!");
+	               break;
+	 case "EMI"  : System.out.println("Down Payment will be 25% of total amount");
+                   System.out.println("Remaining amount can be payable in 1 to 7 years as suitable to you with the rate of interest/annum");
+                   break;
+	 }
+	 return "";
+	}
+	 
+//static method	 
+	public static void input1() {
+		 Scanner s5= new Scanner(System.in);
+	     Scanner s6= new Scanner(System.in);
+	     System.out.println(" ");
+	     
+		 System.out.println("Please enter your Name :");
+		 String Name=s5.nextLine();
+		 System.out.println(" ");
+		 
+		 System.out.println("Please enter your Mobile Number :");
+		 int Mob=s5.nextInt(10);
+		 System.out.println(" ");
+		 
+		 System.out.println("Please enter your Address :");
+		 String Address=s6.nextLine();
+		 System.out.println(" ");
+		 
+		 Details de=new Details();
+    	 de.setName(Name);
+    	 System.out.println("Name: "+de.getName());
+    	
+    	 de.setMob(Mob);
+    	 System.out.println("Mobile Number: "+de.getMob());
+    	
+    	de.setadd(Address);
+    	System.out.println("Address: "+de.getAddress());
+    	System.out.println(" ");
+	}
+			
+//static method	
+	    public static void input() {
+			Random r=new Random();
+			int inp7=r.nextInt(9999);
+			System.out.println("Code :"+inp7);
+		    System.out.println(" ");
+			
+		    Scanner s5= new Scanner(System.in);
+			Scanner s6= new Scanner(System.in);
+			
+			System.out.println("Please enter your Name :");
+			String Name=s5.nextLine();
+			System.out.println(" ");
+			
+			System.out.println("Please enter your Mobile Number :");
+			int Mob=s5.nextInt(10);
+			System.out.println(" ");
+			
+			System.out.println("Please enter your Address :");
+			String Address=s6.nextLine();
+			System.out.println(" "); 	
+			
+			int inp10 = inp7;
+			    
+			System.out.println("Please enter given code if Test Drive is done and want to process further : ");
+			Scanner s7= new Scanner (System.in);
+	    	int inp13=  s7.nextInt();
+	    	System.out.println(" ");
+	    		 
+//if-else	    		 
+			if(inp10==inp13) {
+			    	System.out.println("Next Page!!!");
+			    	System.out.println(" ");
+			    	Details de=new Details();
+			    	
+			    	de.setName(Name);
+			    	System.out.println("Name: "+de.getName());
+			    	
+			    	de.setMob(Mob);
+			    	System.out.println("Mobile Number: "+de.getMob());
+			    	
+			    	de.setadd(Address);
+			    	System.out.println("Address: "+de.getAddress());
+			    	System.out.println(" ");
+			    	
+			    	
+			    	 }
+		  else {
+			    	System.out.println("Wrong Code, please try again!!");
+			    	
+			    	}
+			    
+			 }
+			   
+//Method Overloading	    
+	 public static void TestDrive(String a) {
+		 System.out.println("Please visit showroom for Test Drive!!");
+		 System.out.println(" ");
+		 System.out.println("Here is your code : ");
+		 input();
+		 System.out.println(" ");
+		 
+	 }
+	 
+	 public static void TestDrive(int a) {
+		 System.out.println("Please move to the next page for further process!!");
+		 input1();
+	 }
+	
+	}
+
+class Cycle  {
+	
+	public void cycleModel() {
+	System.out.println(" ");
+	System.out.println("Please select Company : Firefox || Hero Cycles || Hercules");
+	Scanner s = new Scanner(System.in);
+	String inp2= s.nextLine();
+	System.out.println("   ");
+	
+	System.out.println("Selected Company: "+inp2);
+	System.out.println(" ");
+	 
+//switch	
+	switch(inp2) {
+	case "Firefox"     : System.out.println("Select Model : COMBAT-29 D || FUSION X-29 D || TYPHOON-27.5 D || SHOW ALL1");
+	                     break;
+	case "Hero Cycles" : System.out.println("Select Model : HERO SPRINT || HERO THORN || SHOW ALL2");
+	                     break;
+	case "Hercules"    : System.out.println("Select Model :HERCULES ROADEO || HERCULES TOP GEAR || SHOW ALL3 ");
+	                     break;
+	default            : System.out.println("Not Available, Please select from mentioned options!!");
+	}
+	
+	Scanner s3 = new Scanner(System.in);
+	String inp3= s3.nextLine();
+	System.out.println("   ");
+	System.out.println("Displayed Model: "+inp3);
+	
+//switch	
+	switch(inp3) {
+	case "COMBAT-29 D"       : COMBAT_Details();
+                           	   break;
+                           	   
+	case "FUSION X-29 D"     : FUSIONX_Details();
+	                           break;
+	                           
+	case "TYPHOON-27.5 D"    : TYPHOON_Details();
+	                           break;
+	                           
+	case "SHOW ALL"          : COMBAT_Details();
+	                           FUSIONX_Details(); 
+	                           TYPHOON_Details();
+	                           break;
+	                           
+	case "HERO SPRINT"       : HeroSprint_Details();
+	                           break;
+	                           
+	case "HERO THORN"        : HeroThorn_Details();
+	                           break;
+	                           
+	case "SHOW ALL2"         : HeroSprint_Details(); 
+	                           HeroThorn_Details();
+	                           break;
+	                           
+	case "HERCULES ROADEO"   : Roadeo_Details();
+	                           break;
+	                           
+	case "HERCULES TOP GEAR" : TopGear_Details();
+	                           break;
+	                           
+	case "SHOW ALL3"         : Roadeo_Details();
+	                           TopGear_Details();
+	                           break;
+	                           
+	default                  : System.out.println("Not Available, Please select from mentioned options!!");
+	}
+	
+	System.out.println("Please Enter Your Final Model");
+	String inp5=s.nextLine();
+	System.out.println(" ");
+	System.out.println("Please Enter Vehicle Colour From Available Colours");
+	String inp6=s.nextLine();
+	System.out.println(" ");
+	
+//switch	
+	switch(inp5) {
+	case "COMBAT-29 D" : 
+    //switch
+	switch(inp6) {
+	case "RED"  : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	              break;
+	              
+	case "BLUE" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	              break;
+	              
+	default     : System.out.println("This colour is not available, please select from available colours !! ");;
+                  inp6=s.nextLine();
+                  System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+                  break;
+                  
+                 }
+	              break;
+	
+	case "FUSION X-29 D" :
+	//switch	
+	switch(inp6) {
+	case "YELLOW" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                break;
+	                
+	default       : System.out.println("This colour is not available, please select from available colours !! ");;
+                    inp6=s.nextLine();
+                    System.out.println(" ");
+                    System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+                    break;
+                    
+	            }
+	                break;
+	
+	case "TYPHOON-27.5 D" :
+	//switch	
+	switch(inp6) {
+	case "BLUE" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	              break;
+	              
+	default     : System.out.println("This colour is not available, please select from available colours !! ");;
+                  inp6=s.nextLine();
+                  System.out.println(" ");
+                  System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+                  break;
+                  
+             	}
+                  break;
+	
+	case "HERO SPRINT" :
+	//switch
+	switch(inp6) {
+	case "BLUE" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	              break;
+	              
+	case "GREY" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	              break;
+	              
+	default     : System.out.println("This colour is not available, please select from available colours !! ");;
+                  inp6=s.nextLine();
+                  System.out.println(" ");
+                  System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+                  break;
+                  
+	}
+	              break;
+	
+	case "HERO THORN" :
+	//switch
+	switch(inp6) {
+	case "GREEN" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	               break;
+	               
+	default      : System.out.println("This colour is not available, please select from available colours !! ");;
+                   inp6=s.nextLine();
+                   System.out.println(" ");
+                   System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+                   break;
+                   
+	            }
+	               break;
+	
+	case "HERCULES ROADEO" :
+	//switch
+	switch(inp6) {
+	case "GREY"  : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	               break;
+	               
+	case "BLACK" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	               break;
+	               
+	default      : System.out.println("This colour is not available, please select from available colours !! ");;
+                   inp6=s.nextLine();
+                   System.out.println(" ");
+                   System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+                   break;
+                   
+	             }
+	               break;
+
+	case "HERCULES TOP GEAR" :
+	//switch	
+	switch(inp6) {
+	case "MATT BRIGHT BLUE" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                          break;
+	                          
+	default                 : System.out.println("This colour is not available, please select from available colours !! ");;
+                              inp6=s.nextLine();
+                              System.out.println(" ");
+                              System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+                              break;
+             	}
+	                          break;
+
+	}
+	}
+	
+//Non-static method	
+	public void COMBAT_Details() {
+		System.out.println(" ");
+		System.out.println("COMBAT-29 D");
+		System.out.println("24 SPEED GEARS");
+		System.out.println("SUSPENSION FORK");
+		System.out.println("DISC BRAKES");
+		System.out.println("AVAILABLE COLOURS : RED OR BLUE");
+		System.out.println("PRICE : INR 26,100/- ");
+		System.out.println(" ");
+	}
+	
+//Non-static method	
+	public void FUSIONX_Details() {
+		System.out.println(" ");
+		System.out.println("FUSION X-29 D");
+		System.out.println("INTERNAL CABLE ROUTING");
+		System.out.println("60MM TRAVEL FORK");
+		System.out.println("MECHANICAL DISC BRAKES");
+		System.out.println("AVAILABLE COLOURS : YELLOW");
+		System.out.println("PRICE : INR 17,500/-");
+		System.out.println(" ");
+	}
+	
+//Non-static method		
+	public void TYPHOON_Details() {
+		System.out.println(" ");
+		System.out.println("TYPHOON-27.5 D");
+		System.out.println("24 SPEED GEARS");
+		System.out.println("HYDRAULIC LOCKOUT FORK");
+		System.out.println("HYDRAULIC DISC BRAKES");
+		System.out.println("AVAILABLE COLOURS : BLUE");
+		System.out.println("PRICE : INR 34,700/-");
+		System.out.println(" ");
+}
+	
+//Non-static method		
+	public void HeroSprint_Details() {
+		System.out.println(" ");
+		System.out.println("HERO SPRINT");
+		System.out.println("21 GEAR");
+		System.out.println("ONLY FRONT SUSPENSION");
+		System.out.println("DISC BRAKES");
+		System.out.println("GEAR TYPE : REVO SHIFTERS");
+		System.out.println("AVAILABLE COLOURS : GREY OR BLUE");
+		System.out.println("PRICE : INR 12,499/- ");
+		System.out.println(" ");
+	}
+	
+//Non-static method	
+	public void HeroThorn_Details() {
+		System.out.println(" ");
+		System.out.println("HERO THORN");
+		System.out.println("NO GEAR");
+		System.out.println("ONLY FRONT SUSPENSION");
+		System.out.println("WIRE BRAKES");
+		System.out.println("AVAILABLE COLOURS : GREEN");
+		System.out.println("PRICE : INR 9,999/- ");
+		System.out.println(" ");
+	}
+	
+//Non-static method		
+	public void Roadeo_Details() {
+		System.out.println(" ");
+		System.out.println("HERCULES ROADEO");
+		System.out.println("21 SPEED GEAR");
+		System.out.println("DUAL SUSPENSION");
+		System.out.println("V-BRAKES");
+		System.out.println("AVAILABLE COLOURS : GREY OR BLACK");
+		System.out.println("PRICE : INR 11,999/- ");
+		System.out.println(" ");
+	}
+	
+//Non-static method	
+	public void TopGear_Details() {
+		System.out.println(" ");
+		System.out.println("HERCULES TOP GEAR");
+		System.out.println("21 SPEED GEAR");
+		System.out.println("ONLY FRONT SUSPENSION");
+		System.out.println("DISC BRAKES");
+		System.out.println("MOUNTAIN BIKE");
+		System.out.println("AVAILABLE COLOURS : MATT BRIGHT BLUE");
+		System.out.println("PRICE : INR 13,899/- ");
+		System.out.println(" ");
+	}
+}
+
+//class-2
+class Bikes {
+	
+	public void bikeModel() {
+	System.out.println(" ");
+	System.out.println("Please select Company : Honda || TVS || Yamaha");
+	Scanner s = new Scanner(System.in);
+	String inp2= s.nextLine();
+	System.out.println("   ");
+	
+	System.out.println("Displayed Company: "+inp2);
+	System.out.println(" ");
+	 
+//switch	
+	switch(inp2) {
+	case "Honda"  : System.out.println("Select Model : HONDA HNESS CB350 || HONDA UNICORN || SHOW ALL1");
+	                break;
+	                
+	case "TVS"    : System.out.println("Select Model : TVS RAIDER 125 || TVS APACHE RTR 200 4V || TVS SPORT || SHOW ALL2");
+	                break; 
+	                
+	case "Yamaha" : System.out.println("Select Model :YAMAHA FZS 25 || YAMAHA FZS-FI || SHOW ALL3 ");
+	                break;
+	                
+	default       : System.out.println("Not Available, Please select from mentioned options!!");
+	            }
+	
+	Scanner s3 = new Scanner(System.in);
+	String inp3= s3.nextLine();
+	System.out.println("   ");
+	System.out.println("Selected Model: "+inp3);
+	
+//switch	
+	switch(inp3) {
+	case "HONDA HNESS CB350"     : Hness_Details();
+	                               break;
+	                               
+	case "HONDA UNICORN"         : Unicorn_Details();
+	                               break;
+	                               
+	case "SHOW ALL1"             : Hness_Details();
+	                               Unicorn_Details();
+	                               break;
+	                               
+	case "TVS RAIDER 125"        : Raider_Details();
+	                               break;
+	                               
+	case "TVS APACHE RTR 200 4V" : Apache_Details();
+	                               break;
+	                               
+	case "TVS SPORT"             : Sport_Details();
+	                               break;
+	                               
+	case "SHOW ALL2"             : Raider_Details();
+                                   Apache_Details(); 
+	                               Sport_Details();
+	                               break;
+	                               
+	case "YAMAHA FZS 25"         : FZS_25_Details();
+	                               break;
+	                               
+	case "YAMAHA FZS-FI"         : FZS_FI_Details();
+	                               break;
+	                               
+	case "SHOW ALL3"             : FZS_25_Details();
+	                               FZS_FI_Details();
+	                               break;
+	                               
+	default                       :System.out.println("Not Available, Please select from mentioned options!!");
+	
+	               }
+	System.out.println("Please Enter Your Final Model");
+	String inp5=s.nextLine();
+	System.out.println(" ");
+	System.out.println("Please Enter Vehicle Colour From Available Colours");
+	String inp6=s.nextLine();
+	System.out.println(" ");
+
+//switch	
+	switch(inp5) {
+	case "HONDA HNESS CB350" : 
+//switch		
+	switch(inp6) {
+	case "RED METALLIC"   : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                        break;
+	                        
+	case "GREEN METALLIC" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                        break;
+	                        
+	default               : System.out.println("This colour is not available, please select from available colours !! ");;
+                            inp6=s.nextLine();
+                            System.out.println(" ");
+                            System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+                            break;
+                            
+                 }
+	                        break;
+	
+	case "HONDA UNICORN" :
+//switch		
+	switch(inp6) {
+	case "GREY METALLIC" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                       break;
+	                       
+	case "RED METALLIC"  : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                       break;
+	                       
+	default              : System.out.println("This colour is not available, please select from available colours !! ");;
+                           inp6=s.nextLine();
+                           System.out.println(" ");
+                           System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+                           break;
+                           
+             	}
+	                       break;
+	
+	case "TVS RAIDER 125" :
+//switch
+	switch(inp6) {
+	case "BLUE"   : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                break;
+	                
+	case "BLACK"  : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                break;
+	                
+	case "YELLOW" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                break;
+	                
+	default       : System.out.println("This colour is not available, please select from available colours !! ");;
+                    inp6=s.nextLine();
+                    System.out.println(" ");
+                    System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+                    break;
+                    
+	}
+	                break;
+	
+	case "TVS APACHE RTR 200 4V" :
+	//switch	
+	switch(inp6) {
+	case "BLUE"  : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	               break;
+	               
+	case "BLACK" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	               break;
+	               
+	case "WHITE" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	               break;
+	               
+	default      : System.out.println("This colour is not available, please select from available colours !! ");;
+                   inp6=s.nextLine();
+                   System.out.println(" ");
+                   System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+                   break;
+                   
+	           }
+	               break;
+	
+	case "TVS SPORT" :
+	//switch	
+	switch(inp6) {
+	case "RED METALLIC"   : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+                         	break;
+                         	
+	case "GREEN METALLIC" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                        break;
+	                        
+	default               : System.out.println("This colour is not available, please select from available colours !! ");;
+                            inp6=s.nextLine();
+                            System.out.println(" ");
+                            System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+                            break;
+                            
+	             }
+	                        break;
+	
+	case "YAMAHA FZS 25" :
+//switch		
+	switch(inp6) {
+	case "MATT COPPER" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                     break;
+	                     
+	case "BLACK"       : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                     break;
+	                     
+	default            : System.out.println("This colour is not available, please select from available colours !! ");;
+                         inp6=s.nextLine();
+                         System.out.println(" ");
+                         System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+                         break;
+                         
+	             }
+                       	 break;
+
+	case "YAMAHA FZS-FI" :
+//switch	
+	switch(inp6) {
+	case "BLUE"     : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                  break;
+	                  
+	case "MATT RED" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                  break;
+	                  
+	default         : System.out.println("This colour is not available, please select from available colours !! ");;
+                      inp6=s.nextLine();
+                      System.out.println(" ");
+                      System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+                      break;
+	            }
+	                  break;
+
+	}
+
+	}
+	
+//Non-static method		
+	public void Unicorn_Details() {
+		System.out.println(" ");
+		System.out.println("HONDA UNICORN");
+		System.out.println("162.7cc ENGINE CAPACITY");
+		System.out.println("MILEAGE : 50 KMPL");
+		System.out.println("13 LITRES FUEL TANK CAPACITY");
+		System.out.println("AVAILABLE COLOURS : RED METALLIC OR GREY METALLIC");
+		System.out.println("PRICE : INR 1,03,992/-");
+		System.out.println(" ");
+}
+
+//Non-static method	
+	public void Sport_Details() {
+		System.out.println(" ");
+		System.out.println("TVS SPORT");
+		System.out.println("348.36cc ENGINE CAPACITY");
+		System.out.println("MILEAGE : 35 KMPL");
+		System.out.println("15 LITRES FUEL TANK CAPACITY");
+		System.out.println("AVAILABLE COLOURS : RED METALLIC OR GREEN METALLIC");
+		System.out.println("PRICE : INR 1,95,122/-");
+		System.out.println(" ");
+}
+	
+//Non-static method	
+	public void Hness_Details() {
+		System.out.println(" ");
+		System.out.println("HONDA HNESS CB350");
+		System.out.println("348.36cc ENGINE CAPACITY");
+		System.out.println("MILEAGE : 35 KMPL");
+		System.out.println("15 LITRES FUEL TANK CAPACITY");
+		System.out.println("AVAILABLE COLOURS : RED METALLIC OR GREEN METALLIC");
+		System.out.println("PRICE : INR 1,95,122/-");
+		System.out.println(" ");
+}
+
+//Non-static method	
+	public void Apache_Details() {
+		System.out.println(" ");
+		System.out.println("TVS APACHE RTR 200 4V");
+		System.out.println("197.75cc ENGINE CAPACITY");
+		System.out.println("MILEAGE : 38 KMPL");
+		System.out.println("12 LITRES FUEL TANK CAPACITY");
+		System.out.println("AVAILABLE COLOURS : BLUE OR WHITE OR BLACK");
+		System.out.println("PRICE : INR 1,28,288/-");
+		System.out.println(" ");
+}
+	
+//Non-static method	
+	public void Raider_Details() {
+		System.out.println(" ");
+		System.out.println("TVS RAIDER 125");
+		System.out.println("124.8cc ENGINE CAPACITY");
+		System.out.println("MILEAGE : 58 KMPL");
+		System.out.println("10 LITRES FUEL TANK CAPACITY");
+		System.out.println("AVAILABLE COLOURS : BLUE OR YELLOW OR BLACK");
+		System.out.println("PRICE : INR 88,078/-");
+		System.out.println(" ");
+}
+	
+//Non-static method	
+	public void FZS_25_Details() {
+		System.out.println(" ");
+		System.out.println("YAMAHA FZS 25");
+		System.out.println("Features : Class D Bi Functional LED H/L,Light Weight Body,Under Cowling");
+		System.out.println("7-STEP ADJUSTABLE MONOCROSS SUSPENSION");
+		System.out.println("DISC BRAKES");
+		System.out.println("AVAILABLE COLOURS : Matt Copper OR BLACK");
+		System.out.println("PRICE : INR 1,49,900/- ");
+		System.out.println(" ");
+	}
+	
+//Non-static method	
+	public void FZS_FI_Details() {
+		System.out.println(" ");
+		System.out.println("YAMAHA FZS-FI");
+		System.out.println("Features : Class D Bi Functional LED H/L,Light Weight Body,Under Cowling");
+		System.out.println("MONOCROSS SUSPENSION");
+		System.out.println("149 CC POWERFUL ENGINE");
+		System.out.println("AVAILABLE COLOURS : Matt RED OR BLUE");
+		System.out.println("PRICE : INR 1,20,400/- ");
+		System.out.println(" ");
+	}
+	
+}
+
+//class-3
+class Scooter {
+	
+	public void scooterModel() {
+	System.out.println(" ");
+	System.out.println("Please select Company : Honda || TVS || Suzuki");
+	Scanner s = new Scanner(System.in);
+	String inp2= s.nextLine();
+	System.out.println("   ");
+	
+	System.out.println("Displayed Company: "+inp2);
+	System.out.println(" ");
+	 
+//switch	
+	switch(inp2) {
+	case "Honda"  : System.out.println("Select Model : HONDA DIO || HONDA ACTIVA || SHOW ALL1");
+	                break;
+	                
+	case "TVS"    : System.out.println("Select Model : TVS Ntorq 125 || TVS Jupiter 125 || TVS Jupiter ZX BSVI || SHOW ALL2");
+	                break;
+	                
+	case "Suzuki" : System.out.println("Select Model :SUZUKI BURGMAN STREET 125 || SUZUKI ACCESS 125 || SHOW ALL3 ");
+	                break;
+	                
+	default       : System.out.println("Not Available, Please select from mentioned options!!");
+	             }
+	
+	Scanner s3 = new Scanner(System.in);
+	String inp3= s3.nextLine();
+	System.out.println("   ");
+	System.out.println("Displayed Model: "+inp3);
+	
+//switch	
+	switch(inp3) {
+	case "HONDA DIO"                 : DIO_Details();
+	                                   break;
+	                                   
+	case "HONDA ACTIVA"              : Activa_Details();
+	                                   break;
+	                                   
+	case "SHOW ALL1"                 : DIO_Details();
+	                                   Activa_Details();
+	                                   break;
+	                                   
+	case "TVS Ntorq 125"             : Ntorq_Details();
+	                                   break;
+	                                   
+	case "TVS Jupiter 125"           : Jupiter_Details();
+	                                   break;
+	                                   
+	case "TVS Jupiter ZX BSVI"       : ZX_Details();
+	                                   break;
+	                                   
+	case "SHOW ALL2"                 : Ntorq_Details();
+	                                   Jupiter_Details();
+	                                   ZX_Details();
+                                       break;
+                                       
+	case "SUZUKI BURGMAN STREET 125" : Street_Details();
+	                                   break;
+	                                   
+	case "SUZUKI ACCESS 125"         : Access_Details();
+	                                   break;
+	                                   
+	case "SHOW ALL3"                 : Street_Details();
+	                                   Access_Details();
+	                                   break;
+	                                   
+	default                          : System.out.println("Not Available, Please select from mentioned options!!");
+	}
+	
+	System.out.println("Please Enter Your Final Model");
+	String inp5=s.nextLine();
+	System.out.println(" ");
+	System.out.println("Please Enter Vehicle Colour From Available Colours");
+	String inp6=s.nextLine();
+	System.out.println(" ");
+	
+//switch	
+	switch(inp5) {
+	case "HONDA DIO" :
+//switch		
+	switch(inp6) {
+	case "RED"           : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                       break;
+	                       
+	case "GREY METALLIC" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                       break;
+	                       
+	default              : System.out.println("This colour is not available, please select from available colours !! ");;
+                           inp6=s.nextLine();
+                           System.out.println(" ");
+                           System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+                           break;
+                  }
+	                       break;
+	
+	case "HONDA ACTIVA" :
+//switch		
+	switch(inp6) {
+	case "GREEN METALLIC" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                        break;
+	                        
+	case "WHITE"          : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                        break;
+	                        
+	default               : System.out.println("This colour is not available, please select from available colours !! ");;
+                            inp6=s.nextLine();
+                            System.out.println(" ");
+                            System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+                            break;
+	             }
+	                        break;
+	
+	case "TVS Ntorq 125" :
+//switch		
+	switch(inp6) {
+	case "PINK"  : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+               	   break;
+               	   
+	case "BLACK" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	               break;
+	               
+	default      : System.out.println("This colour is not available, please select from available colours !! ");;
+                   inp6=s.nextLine();
+                   System.out.println(" ");
+                   System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+                   break;
+            	}
+	               break;
+	
+	case "TVS Jupiter 125" :
+//switch	
+	switch(inp6) {
+	case "YELLOW" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                break;
+	                
+	case "BLACK"  : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                break;
+	                
+	default       : System.out.println("This colour is not available, please select from available colours !! ");;
+                    inp6=s.nextLine();
+                    System.out.println(" ");
+                    System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+                    break;
+	           }
+	                break;
+	
+	case "TVS Jupiter ZX BSVI" :
+//switch		
+	switch(inp6) {
+	case "YELLOW" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                break;
+	                
+	case "BLACK"  : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                break;
+	                
+	case "BLUE"   : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                break;
+	                
+	default       : System.out.println("This colour is not available, please select from available colours !! ");;
+                    inp6=s.nextLine();
+                    System.out.println(" ");
+                    System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+                    break;
+	          }
+	                break;
+	
+	case "SUZUKI BURGMAN STREET 125" :
+//switch		
+	switch(inp6) {
+	case "GREY"  : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	               break;
+	               
+	case "BLACK" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	               break;
+	               
+	default      : System.out.println("This colour is not available, please select from available colours !! ");;
+                   inp6=s.nextLine();
+                   System.out.println(" ");
+                   System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+                   break;
+             	}
+	               break;
+
+	case "SUZUKI ACCESS 125" :
+//switch		
+	switch(inp6) {
+	case "MATT BLUE"   : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                     break;
+	                     
+	case "GLOSSY GREY" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                     break;
+	                     
+	default            : System.out.println("This colour is not available, please select from available colours !! ");;
+                         inp6=s.nextLine();
+                         System.out.println(" ");
+                         System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+                         break;
+	             }
+	                     break;
+
+	}
+	}
+	
+//Non-static method	
+	public void DIO_Details() {
+		System.out.println(" ");
+		System.out.println("HONDA DIO");
+		System.out.println("109.51cc ENGINE CAPACITY");
+		System.out.println("MILEAGE : 48 KMPL");
+		System.out.println("5.3 LITRES FUEL TANK CAPACITY");
+		System.out.println("AVAILABLE COLOURS : RED OR GREY METALLIC");
+		System.out.println("PRICE : INR 71,132/-");
+		System.out.println(" ");
+}
+	
+//Non-static method		
+	public void Activa_Details() {
+		System.out.println(" ");
+		System.out.println("HONDA ACTIVA 6G");
+		System.out.println("109.51cc ENGINE CAPACITY");
+		System.out.println("MILEAGE : 47 KMPL");
+		System.out.println("5.3 LITRES FUEL TANK CAPACITY");
+		System.out.println("AVAILABLE COLOURS : WHITE OR GREEN METALLIC");
+		System.out.println("PRICE : INR 73,400/-");
+		System.out.println(" ");
+}
+	
+//Non-static method	
+	public void Ntorq_Details() {
+		System.out.println(" ");
+		System.out.println("TVS Ntorq 125");
+		System.out.println("124.8cc ENGINE CAPACITY");
+		System.out.println("MILEAGE : 41 KMPL");
+		System.out.println("5.8 LITRES FUEL TANK CAPACITY");
+		System.out.println("AVAILABLE COLOURS : PINK OR BLACK");
+		System.out.println("PRICE : INR 83,779/-");
+		System.out.println(" ");
+}
+
+//Non-static method
+	public void Jupiter_Details() {
+		System.out.println(" ");
+		System.out.println("TVS Jupiter 125");
+		System.out.println("124.8cc ENGINE CAPACITY");
+		System.out.println("MILEAGE : 50.5 KMPL");
+		System.out.println("5.1 LITRES FUEL TANK CAPACITY");
+		System.out.println("AVAILABLE COLOURS : YELLOW OR BLACK");
+		System.out.println("PRICE : INR 81,812/-");
+		System.out.println(" ");
+}
+	
+//Non-static method
+	public void ZX_Details() {
+		System.out.println(" ");
+		System.out.println("TVS Jupiter ZX BSVI");
+		System.out.println("109.7cc ENGINE CAPACITY");
+		System.out.println("MILEAGE : 45 KMPL");
+		System.out.println("5.3 LITRES FUEL TANK CAPACITY");
+		System.out.println("AVAILABLE COLOURS : BLUE OR YELLOW OR BLACK");
+		System.out.println("PRICE : INR 88,078/-");
+		System.out.println(" ");
+}
+	
+//Non-static method
+	public void Street_Details() {
+		System.out.println(" ");
+		System.out.println("SUZUKI BURGMAN STREET 125");
+		System.out.println("124CC ENGINE CAPACITY");
+		System.out.println("MILEAGE : 50 KMPL");
+		System.out.println("5.5 LITRES FUEL TANK CAPACITY");
+		System.out.println("AVAILABLE COLOURS : GREY OR BLACK");
+		System.out.println("PRICE : INR 87,572/- ");
+		System.out.println(" ");
+	}
+	
+//Non-static method
+	public void Access_Details() {
+		System.out.println(" ");
+		System.out.println("YAMAHA FZS-FI");
+		System.out.println("124CC ENGINE CAPACITY");
+		System.out.println("MILEAGE : 48 KMPL");
+		System.out.println("5 LITRES FUEL TANK CAPACITY");
+		System.out.println("AVAILABLE COLOURS : Matt BLUE OR GLOSSY GREY");
+		System.out.println("PRICE : INR 75,932/- ");
+		System.out.println(" ");
+	}
+	
+}
+
+class Auto {
+	
+	public void autoModel() {
+	System.out.println(" ");
+	System.out.println("Please select Company : TVS || Bajaj || SHOW ALL");
+	Scanner s = new Scanner(System.in);
+	String inp2= s.nextLine();
+	System.out.println("   ");
+	
+	System.out.println("Displayed Company: "+inp2);
+	System.out.println(" ");
+	
+//switch	
+	switch(inp2) {
+	case "TVS"      : deluxe_Details();
+	                  break;
+	                  
+	case "Bajaj"    : bajajRE_Details();
+	                  break;
+	                  
+	case "SHOW ALL" : deluxe_Details();bajajRE_Details();
+	                  break;
+	                  
+	default         :System.out.println("Not Available, Please select from mentioned options!!");
+	}
+	
+	System.out.println("Please Enter Your Final Model");
+	String inp5=s.nextLine();
+	System.out.println(" ");
+	System.out.println("Please Enter Vehicle Colour From Available Colours");
+	String inp6=s.nextLine();
+	System.out.println(" ");
+	
+//switch	
+	switch(inp5) {
+	case "TVS DELUXE" : 
+//switch		
+	switch(inp6) {
+	case "GREEN"  : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                break;
+	                
+	case "BLACK"  : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                break;
+	                
+	case "YELLOW" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                break;
+	                
+	default       : System.out.println("This colour is not available, please select from available colours !! ");;
+                    inp6=s.nextLine();
+                    System.out.println(" ");
+                    System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+                    break;
+                }
+	                break;
+	
+	case "BAJAJ RE" :
+//switch		
+	switch(inp6) {
+	case "GREEN" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	               break;
+	               
+	case "BLACK" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	               break;
+	               
+	default      : System.out.println("This colour is not available, please select from available colours !! ");;
+                   inp6=s.nextLine();
+                   System.out.println(" ");
+                   System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+                   break;
+	          }
+	               break;
+	
+		
+	}
+	}
+	
+//Non-static method	
+	public void deluxe_Details() {
+		System.out.println(" ");
+		System.out.println("TVS DELUXE");
+		System.out.println("199.26cc ENGINE CAPACITY");
+		System.out.println("HYDRAULIC BRAKES");
+		System.out.println("8.5 LITRES(pETROL) FUEL TANK CAPACITY");
+		System.out.println("AVAILABLE COLOURS : BLACK OR GREEN OR YELLOW");
+		System.out.println("PRICE : INR 1,80,000/-");
+		System.out.println(" ");
+}
+	
+//Non-static method	
+	public void bajajRE_Details() {
+		System.out.println(" ");
+		System.out.println("BAJAJ RE");
+		System.out.println("470.5cc ENGINE CAPACITY FOR DIESEL / 236.2cc ENGINE CAPACITY FOR PETROL");
+		System.out.println("OIL-COOLED ENGINE");
+		System.out.println("8 LITRES(PETROL/DIESEL) FUEL TANK CAPACITY");
+		System.out.println("AVAILABLE COLOURS : BLACK OR GREEN");
+		System.out.println("PRICE : INR 2,60,000/-");
+		System.out.println(" ");
+}
+		
+}
+
+//class-4
+class Petrol {
+	
+	public void petrolModel() {
+	System.out.println(" ");
+	System.out.println("Please select Company : Hyundai || Maruti || Mahindra");
+	Scanner s = new Scanner(System.in);
+	String inp2= s.nextLine();
+	System.out.println("   ");
+	
+	System.out.println("Displayed Company: "+inp2);
+	System.out.println(" ");
+	 
+//switch	
+	switch(inp2) {
+	case "Hyundai"  : System.out.println("Select Model : Hyundai Alcazar || Hyundai Tucson || SHOW ALL1");
+	                  break;
+	                  
+	case "Maruti"   : System.out.println("Select Model : Maruti Swift || Maruti Suzuki Brezza || SHOW ALL2 ");
+	                  break;
+	                  
+	case "Mahindra" : System.out.println("Select Model :Mahindra XUV700 || Mahindra Scorpio-N || SHOW ALL3 ");
+	                  break;
+	                  
+	default         : System.out.println("Not Available, Please select from mentioned options!!");
+	}
+	
+	
+	Scanner s3 = new Scanner(System.in);
+	String inp3= s3.nextLine();
+	System.out.println("   ");
+	System.out.println("Selected Model: "+inp3);
+	
+//switch	
+	switch(inp3) {
+	case "Hyundai Alcazar"      : Alcazar_Details();
+	                              break;
+	                              
+	case "Hyundai Tucson"       : Tucson_Details();
+	                              break;
+	                              
+	case "SHOW ALL1"            : Alcazar_Details();
+	                              Tucson_Details();
+	                              break;
+	                              
+	case "Maruti Swift"         : Swift_Details();
+	                              break;
+	                              
+	case "Maruti Suzuki Brezza" : Brezza_Details();
+	                              break;
+	                              
+	case "SHOW ALL2"            : Swift_Details();
+	                              Brezza_Details();
+	                              break;
+	                              
+	case "Mahindra XUV700"      : XUV700_Details();
+	                              break;
+	                              
+	case "Mahindra Scorpio-N"   : Scorpio_Details();
+	                              break;
+	                              
+	case "SHOW ALL3"            : XUV700_Details();
+	                              Scorpio_Details();
+	                              break;
+	                              
+	default                     : System.out.println("Not Available, Please select from mentioned options!!");
+	}
+	
+	System.out.println("Please Enter Your Final Model");
+	String inp5=s.nextLine();
+	System.out.println(" ");
+	System.out.println("Please Enter Vehicle Colour From Available Colours");
+	String inp6=s.nextLine();
+	System.out.println(" ");
+	
+//switch	
+	switch(inp5) {
+	case "Hyundai Alcazar" :
+//switch		
+	switch(inp6) {
+	case "SILVER" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                break;
+	                
+	case "BLACK"  : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                break;
+	                
+	case "WHITE"  : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                break;
+	                
+	case "BROWN"  : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                break;
+	                
+	default       : System.out.println("This colour is not available, please select from available colours !! ");;
+                    inp6=s.nextLine();
+                    System.out.println(" ");
+                    System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+                    break;
+              }
+	                break;
+	
+	case "Hyundai Tucson" :
+//switch		
+	switch(inp6) {
+	case "GREY"  : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	               break;
+	               
+	case "WHITE" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	               break;
+	               
+	case "BLACK" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	               break;
+	               
+	default      : System.out.println("This colour is not available, please select from available colours !! ");;
+                   inp6=s.nextLine();
+                   System.out.println(" ");
+                   System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+                   break;
+	            }
+	               break;
+	
+	case "Maruti Swift" : 
+//switch		
+	switch(inp6) {
+	case "GREY"   : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                break;
+	                
+	case "ORANGE" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                break;
+	                
+	case "BLACK"  : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                break;
+	                
+	case "SILVER" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                break;
+	                
+	default       : System.out.println("This colour is not available, please select from available colours !! ");;
+                    inp6=s.nextLine();
+                    System.out.println(" ");
+                    System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+                    break;
+	           }
+                    break;
+	
+	case "Maruti Suzuki Brezza" : 
+//switch		
+	switch(inp6) {
+	case "RED"    : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                break;
+	                
+	case "WHITE"  : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                break;
+	                
+	case "GREY"   : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                break;
+	                
+	case "SILVER" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                break;
+	                
+	default       : System.out.println("This colour is not available, please select from available colours !! ");;
+                    inp6=s.nextLine();
+                    System.out.println(" ");
+                    System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+                    break;
+	           }
+	                break;
+	
+	case "Mahindra XUV700" : 
+//switch		
+	switch(inp6) {
+	case "BLACK"  : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                break;
+	                
+	case "WHITE"  : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                break;
+	                
+	case "SILVER" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                break;
+	                
+	default       : System.out.println("This colour is not available, please select from available colours !! ");;
+                    inp6=s.nextLine();
+                    System.out.println(" ");
+                    System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+                    break;
+	           }
+	                break;
+	
+	case "Mahindra Scorpio-N" :
+//switch		
+	switch(inp6) {
+	case "BLACK"  : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                break;
+	                
+	case "WHITE"  : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                break;
+	                
+	case "SILVER" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                break;
+	                
+	case "RED"    : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                break;
+	                
+	case "BLUE"   : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                break;
+	                
+	default       : System.out.println("This colour is not available, please select from available colours !! ");;
+                    inp6=s.nextLine();
+                    System.out.println(" ");
+                    System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+                    break;
+	             }
+	                break;
+	}
+	}
+	
+//Non-static method	
+		public void Alcazar_Details() {
+		System.out.println(" ");
+		System.out.println("Hyundai Alcazar");
+		System.out.println("1493 to 1997CC ENGINE CAPACITY");
+		System.out.println("MILEAGE : 14.2  TO 20.4 KMPL");
+		System.out.println("FUEL TYPE-PETROL");
+		System.out.println("MANUAL AND AUTOMATIC TRANSMISSION");
+		System.out.println("7 SEATER");
+		System.out.println("AVAILABLE COLOURS : BLACK OR SILVER OR WHITE OR BROWN");
+		System.out.println("PRICE : INR 15,89,000/- ");
+		System.out.println(" ");
+	}
+		
+//Non-static method		
+		public void Tucson_Details() {
+			System.out.println(" ");
+			System.out.println("Hyundai Tucson");
+			System.out.println("1997 to 1999CC ENGINE CAPACITY");
+			System.out.println("TORQUE : 192 to 416 Nm");
+			System.out.println("POWER : 154 to 184 bhp");
+			System.out.println("FUEL TYPE-PETROL");
+			System.out.println("AUTOMATIC TRANSMISSION");
+			System.out.println("6 SEATER");
+			System.out.println("AVAILABLE COLOURS : BLACK OR GREY OR WHITE");
+			System.out.println("PRICE : INR 26,00,000/- ");
+			System.out.println(" ");
+		}
+	
+//Non-static method
+		public void Swift_Details() {
+			System.out.println(" ");
+			System.out.println("Maruti Swift");
+			System.out.println("1997CC ENGINE CAPACITY");
+			System.out.println("MILEAGE : 23.2 to 23.7 KMPL");
+			System.out.println("FUEL TYPE-PETROL");
+			System.out.println("MANUAL AND AUTOMATIC TRANSMISSION");
+			System.out.println("5 SEATER");
+			System.out.println("AVAILABLE COLOURS : BLACK OR GREY OR ORANGE OR SILVER");
+			System.out.println("PRICE : INR 5,91,000/- ");
+			System.out.println(" ");
+		}
+		
+//Non-static method	
+		public void Brezza_Details() {
+			System.out.println(" ");
+			System.out.println("Maruti Suzuki Brezza");
+			System.out.println("1462CC ENGINE CAPACITY");
+			System.out.println("MILEAGE : 19.8 to 19.9 KMPL");
+			System.out.println("FUEL TYPE-PETROL");
+			System.out.println("MANUAL AND AUTOMATIC TRANSMISSION");
+			System.out.println("5 SEATER");
+			System.out.println("AVAILABLE COLOURS : RED OR GREY OR WHITE OR SILVER");
+			System.out.println("PRICE : INR 7,09,000/- ");
+			System.out.println(" ");
+		}
+	
+//Non-static method		
+		public void XUV700_Details() {
+		System.out.println(" ");
+		System.out.println("Mahindra XUV700");
+		System.out.println("1997CC ENGINE CAPACITY");
+		System.out.println("FUEL TYPE-PETROL");
+		System.out.println("MANUAL AND AUTOMATIC TRANSMISSION");
+		System.out.println("7 SEATER");
+		System.out.println("AVAILABLE COLOURS : BLACK OR SILVER OR WHITE");
+		System.out.println("PRICE : INR 13,18,000/- ");
+		System.out.println(" ");
+	}
+	
+//Non-static method	
+		public void Scorpio_Details() {
+		System.out.println(" ");
+		System.out.println("Mahindra Scorpio-N");
+        System.out.println("1997CC ENGINE CAPACITY");
+		System.out.println("FUEL TYPE-PETROL");
+		System.out.println("MANUAL AND AUTOMATIC TRANSMISSION");
+		System.out.println("7 SEATER");
+		System.out.println("AVAILABLE COLOURS : BLACK OR SILVER OR WHITE OR RED OR BLUE");
+		System.out.println("PRICE : INR 11,99,000/- ");
+		System.out.println(" ");
+	}
+}
+
+//class-5
+class Diesel {
+	
+	public void dieselModel() {
+	System.out.println(" ");
+	System.out.println("Please select Company : Jeep || TATA || Toyota");
+	Scanner s = new Scanner(System.in);
+	String inp2= s.nextLine();
+	System.out.println("   ");
+	
+	System.out.println("Displayed Company: "+inp2);
+	System.out.println(" ");
+	 
+//switch	
+	switch(inp2) {
+	case "Jeep"   : System.out.println("Select Model : Jeep Compass || Jeep Meridian || Jeep Compass Trailhawk || SHOW ALL1");
+	                break;
+	                
+	case "TATA"   : System.out.println("Select Model : TATA Harrier || TATA Safari || SHOW ALL2 ");
+	                break;
+	                
+	case "Toyota" : System.out.println("Select Model : Toyota Fortuner || Toyota Innova Crysta || Toyota Hilux || SHOW ALL3");
+	                break;
+	                
+	default       : System.out.println("Not Available, Please select from mentioned options!!");
+	}
+	
+	Scanner s3 = new Scanner(System.in);
+	String inp3= s3.nextLine();
+	System.out.println("   ");
+	System.out.println("Selected Model: "+inp3);
+	
+//switch	
+	switch(inp3) {
+	case "Jeep Compass"           : Compass_Details();
+	                                break;
+	                                
+	case "Jeep Meridian"          : Meridian_Details();
+	                                break;
+	                                
+	case "Jeep Compass Trailhawk" : Trailhawk_Details();
+	                                break;
+	                                
+	case "SHOW ALL1"              : Compass_Details();
+	                                Meridian_Details();
+	                                Trailhawk_Details();
+	                                break;
+	                                
+	case "TATA Harrier"           : Harrier_Details();
+	                                break;
+	                                
+	case "TATA Safari"            : Safari_Details();
+	                                break;
+	                                
+	case "SHOW ALL2"              : Harrier_Details();
+	                                Safari_Details();
+	                                break;
+	                                
+	case "Toyota Fortuner"        : Fortuner_Details();
+	                                break;
+	                                
+	case "Toyota Innova Crysta"   : Innova_Details();
+	                                break;
+	                                
+	case "Toyota Hilux"           : Hilux_Details();
+                                    break;
+                                    
+	case "SHOW ALL3"              : Fortuner_Details();
+		                            Innova_Details();
+	                              	Hilux_Details();
+                                    break;
+                                    
+	default                       : System.out.println("Not Available, Please select from mentioned options!!");
+	}
+	
+	System.out.println("Please Enter Your Final Model");
+	String inp5=s.nextLine();
+	System.out.println(" ");
+	System.out.println("Please Enter Vehicle Colour From Available Colours");
+	String inp6=s.nextLine();
+	System.out.println(" ");
+	
+//switch	
+	switch(inp5) {
+	case "Jeep Compass" :
+//switch		
+		switch(inp6) {
+	case "RED"   : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	               break;
+	               
+	case "BLACK" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	               break;
+	               
+	case "BLUE"  : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	               break;
+	               
+	case "GREY"  : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	               break;
+	               
+	default      : System.out.println("This colour is not available, please select from available colours !! ");;
+                   inp6=s.nextLine();
+                   System.out.println(" ");
+                   System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+                   break;
+              }
+	               break;
+	
+	case "Jeep Meridian" :
+//switch		
+	switch(inp6) {
+	case "GREY"  : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	               break;
+	               
+	case "GREEN" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	               break;
+	               
+	case "BLACK" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	               break;
+	               
+	case "RED"   : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	               break;
+	               
+	default      : System.out.println("This colour is not available, please select from available colours !! ");;
+                   inp6=s.nextLine();
+                   System.out.println(" ");
+                   System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+                   break;
+	          }
+	               break;
+	
+	case "Jeep Compass Trailhawk" :
+//switch		
+    switch(inp6) {
+	case "GREY"  : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	               break;
+	               
+	case "GREEN" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	               break;
+	               
+	case "BLACK" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	               break;
+	               
+	default      : System.out.println("This colour is not available, please select from available colours !! ");;
+                   inp6=s.nextLine();
+                   System.out.println(" ");
+                   System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+                   break;
+	          }
+                   break;
+	
+	case "TATA Harrier" :
+//switch		
+	switch(inp6) {
+	case "BLACK" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	               break;
+	               
+	case "BLUE"  : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	               break;
+	               
+	case "GREY"  : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	               break;
+	               
+	default      : System.out.println("This colour is not available, please select from available colours !! ");;
+                   inp6=s.nextLine();
+                   System.out.println(" ");
+                   System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+                   break;
+	          }
+	               break;
+	
+	case "TATA Safari" :
+//switch		
+	switch(inp6) {
+	case "BLACK" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	               break;
+	               
+	case "WHITE" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	               break;
+	               
+	case "BLUE"  : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	               break;
+	               
+	case "GREY"  : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	               break;
+	               
+	default      : System.out.println("This colour is not available, please select from available colours !! ");;
+                   inp6=s.nextLine();
+                   System.out.println(" ");
+                   System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+                   break;
+              	}
+	               break;
+	
+	case "Toyota Fortuner" : 
+//switch		
+		switch(inp6) {
+	case "BLACK"  : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                break;
+	                
+	case "WHITE"  : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                break;
+	                
+	case "SILVER" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                break;
+	                
+	case "GREY"   : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                break;
+	                
+	default       : System.out.println("This colour is not available, please select from available colours !! ");;
+                    inp6=s.nextLine();
+                    System.out.println(" ");
+                    System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+                    break;
+	             }
+	                break;
+	
+	case "Toyota Innova Crysta" : 
+//switch		
+	switch(inp6) {
+	case "BLACK"  : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                break;
+	                
+	case "BROWN"  : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                break;
+	                
+	case "SILVER" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                break;
+	                
+	case "GREY"   : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                break;
+	                
+	default       : System.out.println("This colour is not available, please select from available colours !! ");;
+	                inp6=s.nextLine();
+	                System.out.println(" ");
+	                System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                break;
+	        }
+	
+	                break;
+	
+	case "Toyota Hilux" : 
+//switch		
+	switch(inp6) {
+	case "BROWN" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	               break;
+	               
+	case "GREY"  : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	               break;
+	               
+	default      : System.out.println("This colour is not available, please select from available colours !! ");;
+	               inp6=s.nextLine();
+	               System.out.println(" ");
+	               System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	               break;
+	          }
+	
+	               break;
+	
+	}
+	}
+	
+	
+//Non-static method	
+	public void Compass_Details() {
+		System.out.println(" ");
+		System.out.println("Jeep Compass");
+		System.out.println("MILEAGE : 17.1 KMPL");
+		System.out.println("1368 to 1956CC ENGINE CAPACITY");
+		System.out.println("MANUAL AND AUTOMATIC TRANSMISSION");
+		System.out.println("FUEL TYPE : DIESEL");
+		System.out.println("AVAILABLE COLOURS : RED OR BLUE OR GREY OR BLACK");
+		System.out.println("PRICE : INR 18,38,000/- ");
+		System.out.println(" ");
+	}
+	
+//Non-static method
+	public void Meridian_Details() {
+		System.out.println(" ");
+		System.out.println("Jeep Meridian");
+		System.out.println("MILEAGE : 15.43 to 16.2 KMPL");
+		System.out.println("1956CC ENGINE CAPACITY");
+		System.out.println("MANUAL AND AUTOMATIC TRANSMISSION");
+		System.out.println("FUEL TYPE : DIESEL");
+		System.out.println("AVAILABLE COLOURS : GREEN OR GREY OR BLACK OR RED");
+		System.out.println("PRICE : INR 30,97,000/- ");
+		System.out.println(" ");
+	}
+	
+//Non-static method
+	public void Trailhawk_Details() {
+		System.out.println(" ");
+		System.out.println("Jeep Compass Trailhawk");
+		System.out.println("5 SEATER");
+		System.out.println("1998CC ENGINE CAPACITY");
+		System.out.println("AUTOMATIC TRANSMISSION");
+		System.out.println("FUEL TYPE : DIESEL");
+		System.out.println("AVAILABLE COLOURS : GREEN OR GREY OR BLACK");
+		System.out.println("PRICE : INR 29,90,000/- ");
+		System.out.println(" ");
+	}
+	
+//Non-static method
+	public void Harrier_Details() {
+		System.out.println(" ");
+		System.out.println("TATA Harrier");
+		System.out.println("MILEAGE : 16.35 KMPL");
+		System.out.println("1956CC ENGINE CAPACITY");
+		System.out.println("MANUAL AND AUTOMATIC TRANSMISSION");
+		System.out.println("FUEL TYPE : DIESEL");
+		System.out.println("AVAILABLE COLOURS : BLUE OR GREY OR BLACK");
+		System.out.println("PRICE : INR 21,90,000/- ");
+		System.out.println(" ");
+	}
+	
+//Non-static method
+	public void Safari_Details() {
+		System.out.println(" ");
+		System.out.println("TATA Safari");
+		System.out.println("MILEAGE : 16.14 KMPL");
+		System.out.println("1956CC ENGINE CAPACITY");
+		System.out.println("MANUAL AND AUTOMATIC TRANSMISSION");
+		System.out.println("FUEL TYPE : DIESEL");
+		System.out.println("AVAILABLE COLOURS : WHITE OR BLUE OR GREY OR BLACK");
+		System.out.println("PRICE : INR 23,56,000/- ");
+		System.out.println(" ");
+	}
+	
+//Non-static method
+	public void Fortuner_Details() {
+		System.out.println(" ");
+		System.out.println("Toyota Fortuner");
+		System.out.println("MILEAGE : 8.0 KMPL");
+		System.out.println("2755CC ENGINE CAPACITY");
+		System.out.println("AUTOMATIC TRANSMISSION");
+		System.out.println("FUEL TYPE : DIESEL");
+		System.out.println("AVAILABLE COLOURS : WHITE OR SILVER OR GREY OR BLACK");
+		System.out.println("PRICE : INR 47,56,000/- ");
+		System.out.println(" ");
+	}
+	
+//Non-static method
+	public void Innova_Details() {
+		System.out.println(" ");
+		System.out.println("Toyota Innova Crysta");
+		System.out.println("MILEAGE : 12.0 KMPL");
+		System.out.println("2694CC ENGINE CAPACITY");
+		System.out.println("MANUAL AND AUTOMATIC TRANSMISSION");
+		System.out.println("FUEL TYPE : DIESEL");
+		System.out.println("AVAILABLE COLOURS : BROWN OR SILVER OR GREY OR BLACK");
+		System.out.println("PRICE : INR 26,54,000/- ");
+		System.out.println(" ");
+	}
+	
+//Non-static method	
+	public void Hilux_Details() {
+		System.out.println(" ");
+		System.out.println("Toyota Hilux");
+		System.out.println("POWER : 201.15BHP");
+		System.out.println("2755CC ENGINE CAPACITY");
+		System.out.println("MANUAL AND AUTOMATIC TRANSMISSION");
+		System.out.println("FUEL TYPE : DIESEL");
+		System.out.println("AVAILABLE COLOURS : BROWN OR GREY");
+		System.out.println("PRICE : INR 36,80,000/- ");
+		System.out.println(" ");
+	}	
+}
+
+//class-6
+class EV {
+	
+	public void evModel() {
+	System.out.println(" ");
+	System.out.println("Please select Company : TATA || AUDI || BMW");
+	Scanner s = new Scanner(System.in);
+	String inp2= s.nextLine();
+	System.out.println("   ");
+	
+	System.out.println("Displayed Company: "+inp2);
+	System.out.println(" ");
+	 
+//switch	
+	switch(inp2) {
+	case "TATA" : System.out.println("Select Model : TATA NEXON EV PRIME || TATA TIGOR EV || TATA NEXON EV MAX || SHOW ALL1");
+	              break;
+	              
+	case "AUDI" : System.out.println("Select Model : AUDI RS e-tron GT || AUDI e-tron GT || SHOW ALL2 ");
+	              break;
+	              
+	case "BMW"  : System.out.println("Select Model : BMW i4 || BMW iX || SHOW ALL3 ");
+	              break;
+	              
+	default     : System.out.println("Not Available, Please select from mentioned options!!");
+	}
+	
+	Scanner s3 = new Scanner(System.in);
+	String inp3= s3.nextLine();
+	System.out.println("   ");
+	System.out.println("Selected Model: "+inp3);
+	
+//switch	
+	switch(inp3) {
+	case "TATA NEXON EV PRIME" : Prime_Details();
+	                             break;
+	                             
+	case "TATA TIGOR EV"       : Tigor_Details();
+	                             break;
+	                             
+	case "TATA NEXON EV MAX"   : Max_Details();
+	                             break;
+	                             
+	case "SHOW ALL1"           : Prime_Details();
+	                             Tigor_Details();
+	                             Max_Details();
+	                             break;
+	                             
+	case "AUDI RS e-tron GT"   : RS_Details();
+	                             break;
+	                             
+	case "AUDI e-tron GT"      : GT_Details();
+	                             break;
+	                             
+	case "SHOW ALL2"           : RS_Details();
+	                             GT_Details();
+	                             break;
+	                             
+	case "BMW i4"              : i4_Details();
+	                             break;
+	                             
+	case "BMW iX"              : iX_Details();
+	                             break;
+	                             
+	case "SHOW ALL3"           : i4_Details();
+	                             iX_Details();
+	                             break;
+	                             
+	default                    :System.out.println("Not Available, Please select from mentioned options!!");
+	              }
+	
+	System.out.println("Please Enter Your Final Model");
+	String inp5=s.nextLine();
+	System.out.println(" ");
+	System.out.println("Please Enter Vehicle Colour From Available Colours");
+	String inp6=s.nextLine();
+	System.out.println(" ");
+	
+//switch	
+	switch(inp5) {
+	case "TATA NEXON EV PRIME" : 
+//switch		
+	switch(inp6) {
+	case "WHITE" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	               break;
+	               
+	case "BLACK" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	               break;
+	               
+	case "BLUE"  : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	               break;
+	               
+	default      : System.out.println("This colour is not available, please select from available colours !! ");;
+                   inp6=s.nextLine();
+                   System.out.println(" ");
+                   System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+                   break;
+               }
+	               break;
+	
+	case "TATA TIGOR EV" :
+//switch		
+	switch(inp6) {
+	case "GREY" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	              break;
+	              
+	case "BLUE" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	              break;
+	              
+	default     : System.out.println("This colour is not available, please select from available colours !! ");;
+                  inp6=s.nextLine();
+                  System.out.println(" ");
+                  System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+                  break;
+	            }
+               	  break;
+	
+	case "TATA NEXON EV MAX" : 
+//switch		
+	switch(inp6) {
+	case "BLUE" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	              break;
+	              
+	default     : System.out.println("This colour is not available, please select from available colours !! ");;
+                  inp6=s.nextLine();
+                  System.out.println(" ");
+                  System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+                  break;
+	           }
+                  break;
+	
+	case "AUDI RS e-tron GT" : 
+//switch		
+	switch(inp6) {
+	case "BLACK" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	               break;
+	               
+	case "WHITE" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	               break;
+	               
+	case "GREEN" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	               break;
+	               
+	case "RED"   : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	               break;
+	               
+	case "BLUE"  : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	               break;
+	               
+	default      : System.out.println("This colour is not available, please select from available colours !! ");;
+                   inp6=s.nextLine();
+                   System.out.println(" ");
+                   System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+                   break;
+	           }
+	               break;
+	
+	case "AUDI e-tron GT" : 
+//switch		
+	switch(inp6) {
+	case "BLACK" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	               break;
+	               
+	case "WHITE" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	               break;
+	               
+	case "GREEN" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	               break;
+	               
+	case "RED"   : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	               break;
+	               
+	case "BLUE"  : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	               break;
+	               
+	default      : System.out.println("This colour is not available, please select from available colours !! ");;
+                   inp6=s.nextLine();
+                   System.out.println(" ");
+                   System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+                   break;
+	          }
+	               break;
+	
+	case "BMW i4" :
+//switch		
+	switch(inp6) {
+	case "BLACK" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	               break;
+	               
+	case "WHITE" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	               break;
+	               
+	default      : System.out.println("This colour is not available, please select from available colours !! ");;
+                   inp6=s.nextLine();
+                   System.out.println(" ");
+                   System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+                   break;
+	          }
+	               break;
+	
+	case "BMW iX" :
+//switch		
+	switch(inp6) {
+	case "BLACK"  : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                break;
+	                
+	case "WHITE"  : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                break;
+	                
+	case "SILVER" : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                break;
+	                
+	case "RED"    : System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                break;
+	                
+	default       : System.out.println("This colour is not available, please select from available colours !! ");;
+	                inp6=s.nextLine();
+	                System.out.println(" ");
+	                System.out.println("Selected Model : "+inp5+"         "+"Colour : "+inp6);;
+	                break;
+	          }
+	
+                 	break;
+	
+	}
+	}
+	
+	
+//Non-static method	
+	public void Prime_Details() {
+		System.out.println(" ");
+		System.out.println("TATA NEXON EV PRIME");
+		System.out.println("RANGE : 312KM");
+		System.out.println("30.2KWH BATTERY CAPACITY");
+		System.out.println("AUTOMATIC TRANSMISSION");
+		System.out.println("PERMANENT MAGNET SYNCHRONOUS MOTOR");
+		System.out.println("AVAILABLE COLOURS : WHITE OR BLUE OR BLACK");
+		System.out.println("PRICE : INR 17,50,000/- ");
+		System.out.println(" ");
+	}	
+	
+//Non-static method
+	public void Tigor_Details() {
+		System.out.println(" ");
+		System.out.println("TATA TIGOR EV");
+		System.out.println("RANGE : 306KM");
+		System.out.println("26KWH BATTERY CAPACITY");
+		System.out.println("AUTOMATIC TRANSMISSION");
+		System.out.println("PERMANENT MAGNET SYNCHRONOUS MOTOR");
+		System.out.println("AVAILABLE COLOURS : BLUE OR GREY");
+		System.out.println("PRICE : INR 13,64,000/- ");
+		System.out.println(" ");
+	}	
+	
+//Non-static method	
+	public void Max_Details() {
+		System.out.println(" ");
+		System.out.println("TATA NEXON EV MAX");
+		System.out.println("RANGE : 437KM");
+		System.out.println("40.5KWH BATTERY CAPACITY");
+		System.out.println("AUTOMATIC TRANSMISSION");
+		System.out.println("PERMANENT MAGNET SYNCHRONOUS MOTOR");
+		System.out.println("AVAILABLE COLOURS : BLUE");
+		System.out.println("PRICE : INR 19,84,000/- ");
+		System.out.println(" ");
+	}
+	
+//Non-static method	
+	public void RS_Details() {
+		System.out.println(" ");
+		System.out.println("AUDI RS e-tron GT");
+		System.out.println("RANGE : 401-481KM");
+		System.out.println("93.4KWH BATTERY CAPACITY");
+		System.out.println("AUTOMATIC TRANSMISSION");
+		System.out.println("CHARGING TIME : 5:15hrs(5-80%)");
+		System.out.println("AVAILABLE COLOURS : BLACK OR WHITE OR GREEN OR RED OR BLUE");
+		System.out.println("PRICE : INR 1.89 Cr/- ");
+		System.out.println(" ");
+	}
+	
+//Non-static method
+	public void GT_Details() {
+		System.out.println(" ");
+		System.out.println("AUDI e-tron GT");
+		System.out.println("RANGE : 388-500KM");
+		System.out.println("93.4KWH BATTERY CAPACITY");
+		System.out.println("AUTOMATIC TRANSMISSION");
+		System.out.println("CHARGING TIME : 5:15hrs(5-80%)");
+		System.out.println("AVAILABLE COLOURS : BLACK OR WHITE OR GREEN OR RED OR BLUE");
+		System.out.println("PRICE : INR 1.66 Cr/- ");
+		System.out.println(" ");
+	}
+	
+//Non-static method	
+	public void i4_Details() {
+		System.out.println(" ");
+		System.out.println("BMW i4");
+		System.out.println("RANGE : 493-590KM");
+		System.out.println("83.9KWH BATTERY CAPACITY");
+		System.out.println("AUTOMATIC TRANSMISSION");
+		System.out.println("AVAILABLE COLOURS : BLACK OR WHITE");
+		System.out.println("PRICE : INR 69,90,000/- ");
+		System.out.println(" ");
+	}
+	
+//Non-static method
+	public void iX_Details() {
+		System.out.println(" ");
+		System.out.println("BMW iX");
+		System.out.println("RANGE : 372-425KM");
+		System.out.println("71KWH BATTERY CAPACITY");
+		System.out.println("AUTOMATIC TRANSMISSION");
+		System.out.println("CHARGING TIME : 7:25hrs");
+		System.out.println("AVAILABLE COLOURS : BLACK OR WHITE OR SILVER OR RED");
+		System.out.println("PRICE : INR 1.16 Cr/- ");
+		System.out.println(" ");
+	}
+}
+
+//class-7
+class Details{
+	private String Name;
+	private int Mob;
+	private String Address;
+	
+	 public String getName() {
+		 return Name;
+	 }
+	 public void setName(String Name) {
+		 this.Name=Name;
+	 }
+	 
+	 public int getMob() {
+		 return Mob;
+	 }
+	 public void setMob(int Mob) {
+		 this.Mob=Mob;
+	 }
+	 
+	 public String getAddress() {
+		 return Address;
+	 }
+	 public void setadd(String Address) {
+		 this.Address=Address;
+	 }
+
+}

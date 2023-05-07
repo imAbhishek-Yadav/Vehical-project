@@ -1,0 +1,1241 @@
+package vehicle;
+import java.util.Scanner;
+
+class Vehicle
+{
+   String Vehicle_name;
+    String Vehicle_number;
+    String Vehicle_brand;
+    double Vehicle_price;
+    String Vehicle_color;
+    
+    public static void start()
+    {
+        
+    }
+    
+    public static void stop()
+    {
+        
+    }
+    
+    public static void drive()
+    {
+        
+    }
+   }
+    
+   class owner_details
+    {
+        private String owner_name="Abhishek";
+        private long owner_mob_number=1234567890;
+        public String getOwner_Name()
+        {
+            return owner_name;
+        }
+        
+        public long getOwner_Mob_Number()
+        {
+            return owner_mob_number;
+        }
+    }
+
+class Two_wheeler extends Vehicle
+{
+    
+    {
+    	System.out.println("two wheeler section");
+    }
+}
+
+class Bike extends Two_wheeler
+{
+    
+}
+class Bajaj extends Bike
+{
+    
+}
+class Pulsar_220 extends Bajaj
+{
+     Pulsar_220(String Vehicle_name,  String Vehicle_number, String Vehicle_brand,  double Vehicle_price,String Vehicle_color)
+    {
+    	this.Vehicle_name=Vehicle_name;
+  this. Vehicle_number=Vehicle_number;
+    this.Vehicle_brand=Vehicle_brand;
+  this.  Vehicle_price=Vehicle_price;
+    this. Vehicle_color=Vehicle_color;
+}
+}
+
+class Discover extends Bajaj
+{
+     Discover(String Vehicle_name,  String Vehicle_number, String Vehicle_brand,  double Vehicle_price,String Vehicle_color)
+    {
+    	this.Vehicle_name=Vehicle_name;
+  this. Vehicle_number=Vehicle_number;
+    this.Vehicle_brand=Vehicle_brand;
+  this.  Vehicle_price=Vehicle_price;
+    this. Vehicle_color=Vehicle_color;
+}
+}
+
+class Pulsar_200_NS extends Bajaj
+{
+     Pulsar_200_NS(String Vehicle_name,  String Vehicle_number, String Vehicle_brand,  double Vehicle_price,String Vehicle_color)
+    {
+    	this.Vehicle_name=Vehicle_name;
+  this. Vehicle_number=Vehicle_number;
+    this.Vehicle_brand=Vehicle_brand;
+  this.  Vehicle_price=Vehicle_price;
+    this. Vehicle_color=Vehicle_color;
+}
+}
+
+class Pulsar_180F extends Bajaj
+{
+     Pulsar_180F(String Vehicle_name,  String Vehicle_number, String Vehicle_brand,  double Vehicle_price,String Vehicle_color)
+    {
+    	this.Vehicle_name=Vehicle_name;
+  this. Vehicle_number=Vehicle_number;
+    this.Vehicle_brand=Vehicle_brand;
+  this.  Vehicle_price=Vehicle_price;
+    this. Vehicle_color=Vehicle_color;
+}
+}
+
+class Pulsar_200_RS extends Bajaj
+{
+     Pulsar_200_RS(String Vehicle_name,  String Vehicle_number, String Vehicle_brand,  double Vehicle_price,String Vehicle_color)
+    {
+    	this.Vehicle_name=Vehicle_name;
+  this. Vehicle_number=Vehicle_number;
+    this.Vehicle_brand=Vehicle_brand;
+  this.  Vehicle_price=Vehicle_price;
+    this. Vehicle_color=Vehicle_color;
+}
+}
+
+class Honda extends Bike
+{
+    
+}
+class Activa extends Honda
+{
+    Activa( String Vehicle_name, String Vehicle_number, String Vehicle_brand,  double Vehicle_price,String Vehicle_color)
+       {
+       	this.Vehicle_name=Vehicle_name;
+      this. Vehicle_number=Vehicle_number;
+    this.Vehicle_brand=Vehicle_brand;
+  this.  Vehicle_price=Vehicle_price;
+    this. Vehicle_color=Vehicle_color;
+}
+}
+
+class Shine extends Honda
+{
+    Shine( String Vehicle_name, String Vehicle_number, String Vehicle_brand,  double Vehicle_price,String Vehicle_color)
+       {
+       	this.Vehicle_name=Vehicle_name;
+      this. Vehicle_number=Vehicle_number;
+    this.Vehicle_brand=Vehicle_brand;
+  this.  Vehicle_price=Vehicle_price;
+    this. Vehicle_color=Vehicle_color;
+}
+}
+
+class Royal_enfield extends Bike
+{
+    
+}
+class Bullet_350 extends Royal_enfield
+{
+    Bullet_350( String Vehicle_name, String Vehicle_number, String Vehicle_brand,  double Vehicle_price,String Vehicle_color)
+       {
+       	this.Vehicle_name=Vehicle_name;
+      this. Vehicle_number=Vehicle_number;
+    this.Vehicle_brand=Vehicle_brand;
+  this.  Vehicle_price=Vehicle_price;
+    this. Vehicle_color=Vehicle_color;
+}
+}
+
+class Classic_500 extends Royal_enfield
+{
+    Classic_500( String Vehicle_name, String Vehicle_number, String Vehicle_brand,  double Vehicle_price,String Vehicle_color)
+       {
+       	this.Vehicle_name=Vehicle_name;
+      this. Vehicle_number=Vehicle_number;
+    this.Vehicle_brand=Vehicle_brand;
+  this.  Vehicle_price=Vehicle_price;
+    this. Vehicle_color=Vehicle_color;
+}
+}
+
+class Yamaha extends Bike
+{
+    
+}
+
+class FZ_S extends Yamaha
+{
+    FZ_S( String Vehicle_name, String Vehicle_number, String Vehicle_brand,  double Vehicle_price,String Vehicle_color)
+       {
+       	this.Vehicle_name=Vehicle_name;
+      this. Vehicle_number=Vehicle_number;
+    this.Vehicle_brand=Vehicle_brand;
+  this.  Vehicle_price=Vehicle_price;
+    this. Vehicle_color=Vehicle_color;
+}
+}
+
+class MT_15 extends Yamaha
+{
+    MT_15( String Vehicle_name, String Vehicle_number, String Vehicle_brand,  double Vehicle_price,String Vehicle_color)
+       {
+       	this.Vehicle_name=Vehicle_name;
+      this. Vehicle_number=Vehicle_number;
+    this.Vehicle_brand=Vehicle_brand;
+  this.  Vehicle_price=Vehicle_price;
+    this. Vehicle_color=Vehicle_color;
+}
+}
+
+class Cycle extends Two_wheeler
+{
+    Cycle( String Vehicle_name,  String Vehicle_brand,  double Vehicle_price,String Vehicle_color)
+       {
+       	this.Vehicle_name=Vehicle_name;
+     
+    this.Vehicle_brand=Vehicle_brand;
+  this.  Vehicle_price=Vehicle_price;
+    this. Vehicle_color=Vehicle_color;
+}
+}
+
+class Three_wheeler extends Vehicle
+{
+    
+    {
+    	System.out.println("three wheeler section");
+    }
+}
+
+class Auto_rikshaw extends Three_wheeler
+{
+       Auto_rikshaw(String Vehicle_name,  String Vehicle_number, String Vehicle_brand,  double Vehicle_price,String Vehicle_color)
+       {
+       	this.Vehicle_name=Vehicle_name;
+      this. Vehicle_number=Vehicle_number;
+    this.Vehicle_brand=Vehicle_brand;
+  this.  Vehicle_price=Vehicle_price;
+    this. Vehicle_color=Vehicle_color;
+}
+}
+
+class Tum_tum extends Three_wheeler
+{
+    Tum_tum( String Vehicle_name, String Vehicle_number, String Vehicle_brand,  double Vehicle_price,String Vehicle_color)
+       {
+       	this.Vehicle_name=Vehicle_name;
+      this. Vehicle_number=Vehicle_number;
+    this.Vehicle_brand=Vehicle_brand;
+  this.  Vehicle_price=Vehicle_price;
+    this. Vehicle_color=Vehicle_color;
+}
+}
+
+class Chota_Hathi extends Three_wheeler
+{
+    Chota_Hathi( String Vehicle_name, String Vehicle_number, String Vehicle_brand,  double Vehicle_price,String Vehicle_color)
+       {
+       	this.Vehicle_name=Vehicle_name;
+      this. Vehicle_number=Vehicle_number;
+    this.Vehicle_brand=Vehicle_brand;
+  this.  Vehicle_price=Vehicle_price;
+    this. Vehicle_color=Vehicle_color;
+}
+}
+
+class Four_wheeler extends Vehicle
+{
+    
+    {
+    	System.out.println("four wheeler section");
+    }
+}
+class Petrol extends Four_wheeler
+{
+    
+}
+class Vitara_brezza extends Petrol 
+{
+     Vitara_brezza( String Vehicle_name, String Vehicle_number, String Vehicle_brand,  double Vehicle_price,String Vehicle_color)
+       {
+       	this.Vehicle_name=Vehicle_name;
+      this. Vehicle_number=Vehicle_number;
+    this.Vehicle_brand=Vehicle_brand;
+  this.  Vehicle_price=Vehicle_price;
+    this. Vehicle_color=Vehicle_color;
+}
+}
+class Wagonr extends Petrol 
+{
+     Wagonr( String Vehicle_name, String Vehicle_number, String Vehicle_brand,  double Vehicle_price,String Vehicle_color)
+       {
+       	this.Vehicle_name=Vehicle_name;
+      this. Vehicle_number=Vehicle_number;
+    this.Vehicle_brand=Vehicle_brand;
+  this.  Vehicle_price=Vehicle_price;
+    this. Vehicle_color=Vehicle_color;
+}
+}
+
+class Alto extends Petrol 
+{
+     Alto( String Vehicle_name, String Vehicle_number, String Vehicle_brand,  double Vehicle_price,String Vehicle_color)
+       {
+       	this.Vehicle_name=Vehicle_name;
+      this. Vehicle_number=Vehicle_number;
+    this.Vehicle_brand=Vehicle_brand;
+  this.  Vehicle_price=Vehicle_price;
+    this. Vehicle_color=Vehicle_color;
+}
+}
+
+class Diesel extends Four_wheeler
+{
+    
+}
+class Innova extends Diesel
+{
+    Innova( String Vehicle_name, String Vehicle_number, String Vehicle_brand,  double Vehicle_price,String Vehicle_color)
+       {
+       	this.Vehicle_name=Vehicle_name;
+      this. Vehicle_number=Vehicle_number;
+    this.Vehicle_brand=Vehicle_brand;
+  this.  Vehicle_price=Vehicle_price;
+    this. Vehicle_color=Vehicle_color;
+}
+}
+
+class Swift_dezire extends Diesel
+{
+    Swift_dezire( String Vehicle_name, String Vehicle_number, String Vehicle_brand,  double Vehicle_price,String Vehicle_color)
+       {
+       	this.Vehicle_name=Vehicle_name;
+      this. Vehicle_number=Vehicle_number;
+    this.Vehicle_brand=Vehicle_brand;
+  this.  Vehicle_price=Vehicle_price;
+    this. Vehicle_color=Vehicle_color;
+}
+}
+
+class Safari extends Diesel
+{
+    Safari( String Vehicle_name, String Vehicle_number, String Vehicle_brand,  double Vehicle_price,String Vehicle_color)
+       {
+       	this.Vehicle_name=Vehicle_name;
+      this. Vehicle_number=Vehicle_number;
+    this.Vehicle_brand=Vehicle_brand;
+  this.  Vehicle_price=Vehicle_price;
+    this. Vehicle_color=Vehicle_color;
+}
+}
+
+class Electric extends Four_wheeler
+{
+    
+}
+class Tata_nexon extends Electric 
+{
+    Tata_nexon( String Vehicle_name, String Vehicle_number, String Vehicle_brand,  double Vehicle_price,String Vehicle_color)
+       {
+       	this.Vehicle_name=Vehicle_name;
+      this. Vehicle_number=Vehicle_number;
+    this.Vehicle_brand=Vehicle_brand;
+  this.  Vehicle_price=Vehicle_price;
+    this. Vehicle_color=Vehicle_color;
+}
+}
+
+class Tata_EV extends Electric 
+{
+    Tata_EV( String Vehicle_name, String Vehicle_number, String Vehicle_brand,  double Vehicle_price,String Vehicle_color)
+       {
+       	this.Vehicle_name=Vehicle_name;
+      this. Vehicle_number=Vehicle_number;
+    this.Vehicle_brand=Vehicle_brand;
+  this.  Vehicle_price=Vehicle_price;
+    this. Vehicle_color=Vehicle_color;
+}
+}
+
+class Tesla_Model_S extends Electric 
+{
+    Tesla_Model_S( String Vehicle_name, String Vehicle_number, String Vehicle_brand,  double Vehicle_price,String Vehicle_color)
+       {
+       	this.Vehicle_name=Vehicle_name;
+      this. Vehicle_number=Vehicle_number;
+    this.Vehicle_brand=Vehicle_brand;
+  this.  Vehicle_price=Vehicle_price;
+    this. Vehicle_color=Vehicle_color;
+}
+}
+
+class Six_wheeler extends Vehicle
+{
+    
+    {
+    	System.out.println("six wheeler section");
+    }
+}
+class Bharat_Benz_1923C_Tipper extends Six_wheeler
+{
+    Bharat_Benz_1923C_Tipper( String Vehicle_name, String Vehicle_number, String Vehicle_brand,  double Vehicle_price,String Vehicle_color)
+       {
+       	this.Vehicle_name=Vehicle_name;
+      this. Vehicle_number=Vehicle_number;
+    this.Vehicle_brand=Vehicle_brand;
+  this.  Vehicle_price=Vehicle_price;
+    this. Vehicle_color=Vehicle_color;
+}
+}
+
+class Ashok_Leyland_Ecomet_1615_HE_Truck extends Six_wheeler
+{
+   Ashok_Leyland_Ecomet_1615_HE_Truck( String Vehicle_name, String Vehicle_number, String Vehicle_brand,  double Vehicle_price,String Vehicle_color)
+       {
+       	this.Vehicle_name=Vehicle_name;
+      this. Vehicle_number=Vehicle_number;
+    this.Vehicle_brand=Vehicle_brand;
+  this.  Vehicle_price=Vehicle_price;
+    this. Vehicle_color=Vehicle_color;
+}
+
+}
+
+class Mahindra_Furio_16_Truck extends Six_wheeler
+{
+   Mahindra_Furio_16_Truck( String Vehicle_name, String Vehicle_number, String Vehicle_brand,  double Vehicle_price,String Vehicle_color)
+       {
+       	this.Vehicle_name=Vehicle_name;
+      this. Vehicle_number=Vehicle_number;
+    this.Vehicle_brand=Vehicle_brand;
+  this.  Vehicle_price=Vehicle_price;
+    this. Vehicle_color=Vehicle_color;
+}
+
+}
+
+class Bus extends Six_wheeler
+{
+   Bus( String Vehicle_name, String Vehicle_number, String Vehicle_brand,  double Vehicle_price,String Vehicle_color)
+       {
+       	this.Vehicle_name=Vehicle_name;
+      this. Vehicle_number=Vehicle_number;
+    this.Vehicle_brand=Vehicle_brand;
+  this.  Vehicle_price=Vehicle_price;
+    this. Vehicle_color=Vehicle_color;
+}
+
+}
+
+class Sample
+{
+    public static void main(String[] args)
+    {
+     
+     System.out.println("!!..Fill Enquiry Form...!!");
+     Scanner sc1 = new Scanner(System.in);   
+     System.out.println(" ");
+     System.out.println("--------------------------");
+     System.out.println(" ");
+System.out.println("Enter Full Name:");
+     String s = sc1.nextLine();
+     System.out.println(" ");
+      System.out.println("------------------");
+     Scanner sc2 = new Scanner(System.in);     
+     System.out.println(" ");
+     System.out.println("Enter Your Number:");
+      
+     Long l = sc2.nextLong();
+     System.out.println(" ");
+   System.out.println("------------------");
+     
+     
+     
+     {
+     if(l==10)
+     {
+     	
+     	System.out.println("Valid number");
+     }
+     else
+     {
+     
+     }
+     
+     }
+     
+     Scanner sc3 = new Scanner(System.in);    
+     System.out.println(" ");
+     System.out.println("Enter Email:");
+     String e = sc3.nextLine();
+     System.out.println(" ");
+      System.out.println("------------------");
+     if(e=="abc@12.com")
+     {
+     	System.out.println(" ");
+     }
+     else
+     {
+     
+     }
+     System.out.println(" ");
+     System.out.println("check the details:");
+     System.out.println(" ");
+     System.out.println("Name:"+s);
+     System.out.println("Number:"+l);
+     System.out.println("Email id:"+e);
+     System.out.println(" ");
+     System.out.println("-------------------");
+     System.out.println(" ");
+     System.out.println("Enquiry Done Successfully..!!");
+     
+      Scanner sc4 = new Scanner(System.in);
+      System.out.println(" ");
+      System.out.println("!!!!!!!!!!!-------------------------------!!!!!!!!!!!! ");
+      System.out.println(" ");
+          System.out.println("!!!.....welcome to the Abhishek Second Hand Vehicle Showroom.....!!!");
+          System.out.println(" ");
+          System.out.println("!!..Select Your Vehicle Type..!! ");
+          System.out.println(" ");
+          System.out.println("Enter 1 For Two wheeler");
+          System.out.println("Enter 2 For Three wheeler");
+System.out.println("Enter 3 For Four wheeler");
+System.out.println("Enter 4 For Six wheeler");
+System.out.println("Enter 5 For main page");
+System.out.println(" ");
+int num = sc4.nextInt();
+      
+     while(true)
+     {
+     switch (num)
+     {
+         case 1:
+     
+System.out.println(" ");
+System.out.println("!!!...Select Your Favourite brand...!!! ");
+System.out.println(" ");
+System.out.println("Enter 1 For Bajaj");
+System.out.println("Enter 2 For Honda" );
+System.out.println("Enter 3 For Royal Enfield");
+System.out.println("Enter 4 For Yamaha");
+ System.out.println("Enter 5 For Cycle");
+ System.out.println(" ");
+
+
+int num1= sc4.nextInt();
+      
+     
+     switch (num1)
+     {
+           case 1:
+   
+System.out.println(" ");
+System.out.println("!!!!...Select Your Favourite Bike...!!!!");
+System.out.println(" ");
+System.out.println("Enter 1 For Bajaj pulsar 220");
+System.out.println("Enter 2 For Bajaj Discover" );
+System.out.println("Enter 3 For Bajaj Pulsar 200 ns");
+System.out.println("Enter 4 For Bajaj pulsar 180f");
+System.out.println("Enter 5 For Bajaj pulsar 200rs");
+System.out.println(" ");
+ 
+ int num8= sc4.nextInt();
+      
+     
+     switch (num8)
+     {
+         case 1:
+Vehicle   pulsar   = new  Pulsar_220("Pulsar 220","mh12e3456","bajaj",130000,"red");
+System.out.println(" ");
+System.out.println("!!!!...Bike Details...!!!!");
+System.out.println(" ");
+System.out.println("vehicle name: "+pulsar.Vehicle_name);
+System.out.println("vehicle number: "+pulsar.Vehicle_number);
+System.out.println("vehicle brand : "+pulsar.Vehicle_brand);
+System.out.println("vehicle price: "+pulsar.Vehicle_price);
+System.out.println("vehicle color: "+pulsar.Vehicle_color);
+System.out.println(" ");
+System.out.println("Thank You For Select Pulsar 220 Vehicle.");
+System.out.println(" ");
+           break;
+           
+ case 2:
+Vehicle   discover   = new  Pulsar_220("discover","mh12o9056","bajaj",50000,"red");
+System.out.println(" ");
+System.out.println("!!!!...Bike Details...!!!!");
+System.out.println(" ");
+System.out.println("vehicle name: "+discover.Vehicle_name);
+System.out.println("vehicle number: "+discover.Vehicle_number);
+System.out.println("vehicle brand : "+discover.Vehicle_brand);
+System.out.println("vehicle price: "+discover.Vehicle_price);
+System.out.println("vehicle color: "+discover.Vehicle_color);
+System.out.println(" ");
+System.out.println("Thank You For Select discover Vehicle");
+System.out.println(" ");
+           break;     
+           
+      case 3:
+Vehicle   pulsar_200_ns   = new  Pulsar_200_NS("Pulsar 220 ns","mh12i456","bajaj",110000,"red");
+System.out.println(" ");
+System.out.println("!!!!...Bike Details...!!!!");
+System.out.println(" ");
+System.out.println("vehicle name: "+pulsar_200_ns.Vehicle_name);
+System.out.println("vehicle number: "+pulsar_200_ns.Vehicle_number);
+System.out.println("vehicle brand : "+pulsar_200_ns.Vehicle_brand);
+System.out.println("vehicle price: "+pulsar_200_ns.Vehicle_price);
+System.out.println("vehicle color: "+pulsar_200_ns.Vehicle_color);
+System.out.println(" ");
+System.out.println("Thank You For Select Pulsar 200 ns Vehicle");
+System.out.println(" ");
+           break;    
+           
+    case 4:
+Vehicle   pulsar_180f   = new  Pulsar_180F("Pulsar 180f","mh02e3856","bajaj",90000,"black red");
+System.out.println(" ");
+System.out.println("!!!!...Bike Details...!!!!");
+System.out.println(" ");
+System.out.println("vehicle name: "+pulsar_180f.Vehicle_name);
+System.out.println("vehicle number: "+pulsar_180f.Vehicle_number);
+System.out.println("vehicle brand : "+pulsar_180f.Vehicle_brand);
+System.out.println("vehicle price: "+pulsar_180f.Vehicle_price);
+System.out.println("vehicle color: "+pulsar_180f.Vehicle_color);
+System.out.println(" ");
+System.out.println("Thank You For Select Pulsar 180 f Vehicle");
+System.out.println(" ");
+           break;       
+           
+      case 5:
+Vehicle   pulsar_200_rs = new  Pulsar_200_RS("Pulsar 200 rs","mh11tr3456","bajaj",125000,"yellow");
+System.out.println(" ");
+System.out.println("!!!!...Bike Details...!!!!");
+System.out.println(" ");
+System.out.println("vehicle name: "+pulsar_200_rs.Vehicle_name);
+System.out.println("vehicle number: "+pulsar_200_rs.Vehicle_number);
+System.out.println("vehicle brand : "+pulsar_200_rs.Vehicle_brand);
+System.out.println("vehicle price: "+pulsar_200_rs.Vehicle_price);
+System.out.println("vehicle color: "+pulsar_200_rs.Vehicle_color);
+System.out.println(" ");
+System.out.println("Thank You For Select Pulsar 200 rs Vehicle");
+System.out.println(" ");
+           break;                                                 
+           
+           default: System.out.println("Enter Valid Number");
+         break;
+         
+  }    
+  
+  break;
+     
+ case 2:
+  
+System.out.println(" ");
+System.out.println("!!!!...Select Your Favourite Bike...!!!!");
+System.out.println(" ");
+System.out.println("Enter 1 For Activa");
+System.out.println("Enter 2 For Shine" );
+System.out.println(" ");
+
+ int num9= sc4.nextInt();
+      
+     
+     switch (num9)
+     {
+     	case 1:
+Vehicle   activa   = new  Activa("Activa 5g","mh12e356","Honda",30000,"red");
+System.out.println(" ");
+System.out.println("!!!!...Bike Details...!!!!");
+System.out.println(" ");
+System.out.println("vehicle name: "+activa.Vehicle_name);
+System.out.println("vehicle number: "+activa.Vehicle_number);
+System.out.println("vehicle brand : "+activa.Vehicle_brand);
+System.out.println("vehicle price: "+activa.Vehicle_price);
+System.out.println("vehicle color: "+activa.Vehicle_color);
+System.out.println(" ");
+System.out.println("Thank You For Select Activa 5g Vehicle");
+System.out.println(" ");
+
+         break ;
+         
+         case 2:
+Vehicle   shine   = new  Shine("shine","mh34fa356","Honda",39000,"blackish yellow");
+System.out.println(" ");
+System.out.println("!!!!...Bike Details...!!!!");
+System.out.println(" ");
+System.out.println("vehicle name: "+shine.Vehicle_name);
+System.out.println("vehicle number: "+shine.Vehicle_number);
+System.out.println("vehicle brand : "+shine.Vehicle_brand);
+System.out.println("vehicle price: "+shine.Vehicle_price);
+System.out.println("vehicle color: "+shine.Vehicle_color);
+System.out.println(" ");
+System.out.println("Thank You For Select shine Vehicle");
+System.out.println(" ");
+     }
+     break;
+  case 3:
+  System.out.println(" ");
+  System.out.println("!!!!...Select Your Favourite Bike...!!!!");
+  System.out.println(" ");
+System.out.println("Enter 1 For Bullet 350");
+System.out.println("Enter 2 For Classic 500" );
+System.out.println(" ");
+
+ int num10= sc4.nextInt();
+      
+     
+     switch (num10)
+     {
+     	case 1:
+Vehicle   bullet   = new  Bullet_350("Bullet 350","mh12e356","Royal Enfield",200000,"black");
+System.out.println(" ");
+System.out.println("!!!!...Bike Details...!!!!");
+System.out.println(" ");
+System.out.println("vehicle name: "+bullet.Vehicle_name);
+System.out.println("vehicle number: "+bullet.Vehicle_number);
+System.out.println("vehicle brand : "+bullet.Vehicle_brand);
+System.out.println("vehicle price: "+bullet.Vehicle_price);
+System.out.println("vehicle color: "+bullet.Vehicle_color);
+System.out.println(" ");
+System.out.println("Thank You For Select Bullet 350 Vehicle");
+System.out.println(" ");
+
+         break ;
+         
+	case 2:
+ 
+Vehicle   classic_500   = new  Classic_500("classic 500","mh42e3006","Royal Enfield",220000,"black");
+System.out.println(" ");
+System.out.println("!!!!...Bike Details...!!!!");
+System.out.println(" ");
+System.out.println("vehicle name: "+classic_500.Vehicle_name);
+System.out.println("vehicle number: "+classic_500.Vehicle_number);
+System.out.println("vehicle brand : "+classic_500.Vehicle_brand);
+System.out.println("vehicle price: "+classic_500.Vehicle_price);
+System.out.println("vehicle color: "+classic_500.Vehicle_color);
+System.out.println(" ");
+System.out.println("Thank You For Select Classic 500 Vehicle");
+System.out.println(" ");
+
+         break ;
+     }
+     break;
+         
+   case 4:
+    System.out.println(" ");
+    System.out.println("!!!!...Select Your Favourite Bike...!!!!");
+    System.out.println(" ");
+    System.out.println("Enter 1 For FZ S");
+    System.out.println("Enter 2 For MT 15" );
+    System.out.println(" ");
+
+ int num11= sc4.nextInt();
+      
+     
+     switch (num11)
+     {
+     	case 1:
+Vehicle   yamaha   = new  FZ_S("fz s","mh17tr0356","Yamaha",130000,"black");
+System.out.println(" ");
+System.out.println("!!!!...Bike Details...!!!!");
+System.out.println(" ");
+System.out.println("vehicle name: "+yamaha.Vehicle_name);
+System.out.println("vehicle number: "+yamaha.Vehicle_number);
+System.out.println("vehicle brand : "+yamaha.Vehicle_brand);
+System.out.println("vehicle price: "+yamaha.Vehicle_price);
+System.out.println("vehicle color: "+yamaha.Vehicle_color);
+System.out.println(" ");
+System.out.println("Thank You For Select FZ S Vehicle");
+System.out.println(" ");
+
+         break ;
+         
+   	case 2:
+Vehicle   mt_15   = new  MT_15("mt 15","mh43ar9356","Yamaha",130000,"white grey");
+System.out.println(" ");
+System.out.println("!!!!...Bike Details...!!!!");
+System.out.println(" ");
+System.out.println("vehicle name: "+mt_15.Vehicle_name);
+System.out.println("vehicle number: "+mt_15.Vehicle_number);
+System.out.println("vehicle brand : "+mt_15.Vehicle_brand);
+System.out.println("vehicle price: "+mt_15.Vehicle_price);
+System.out.println("vehicle color: "+mt_15.Vehicle_color);
+System.out.println(" ");
+System.out.println("Thank You For Select MT 15 Vehicle");
+System.out.println(" ");
+
+         break ;
+     }
+     break;
+         
+          case 5:
+Cycle   bi_cycle  = new  Cycle("Cycle","Hercules",10000,"black");
+System.out.println(" ");
+System.out.println("!!!!...Cycle Details...!!!!");
+System.out.println(" ");
+System.out.println("vehicle name: "+bi_cycle.Vehicle_name);
+
+System.out.println("vehicle brand : "+bi_cycle.Vehicle_brand);
+System.out.println("vehicle price: "+bi_cycle.Vehicle_price);
+System.out.println("vehicle color: "+bi_cycle.Vehicle_color);
+System.out.println(" ");
+System.out.println("Thank You For Select Cycle Vehicle");
+System.out.println(" ");
+
+         break ;
+           
+         default: System.out.println("Enter Valid Number");
+         break;
+     
+     }
+       
+    Scanner sc5 = new Scanner(System.in);
+    System.out.println(" ");
+    break;
+       
+  case 2:
+   
+System.out.println(" ");
+System.out.println("!!!!...Select Your Favourite Three wheeler...!!!!");
+System.out.println(" ");
+System.out.println("Enter 1 For Auto Rikshaw");
+System.out.println("Enter 2 For Tum Tum" );
+System.out.println("Enter 3 For Chota Hathi");
+System.out.println(" ");
+
+ int num2= sc4.nextInt();
+     
+       
+ 
+switch(num2)
+{
+           
+         case 1:
+      
+         Vehicle   auto   = new  Auto_rikshaw("auto rikshaw","mh16e9456","auto",130000,"black");
+         System.out.println(" ");
+         System.out.println("!!!!...Auto Details...!!!!");
+         System.out.println(" ");
+         System.out.println("vehicle name: "+auto.Vehicle_name);
+System.out.println("vehicle number: "+auto.Vehicle_number);
+System.out.println("vehicle brand : "+auto.Vehicle_brand);
+System.out.println("vehicle price: "+auto.Vehicle_price);
+System.out.println("vehicle color: "+auto.Vehicle_color);
+System.out.println(" ");
+System.out.println("Thank You For Select Auto Rikshaw Vehicle");
+System.out.println(" ");
+
+         break;
+         
+           
+         case 2:
+      
+         Vehicle   tum_tum   = new  Auto_rikshaw("Tum Tum","mh46e9056","L&T",230000,"brown");
+         System.out.println(" ");
+         System.out.println("!!!!...Tum Tum Details...!!!!");
+         System.out.println(" ");
+         System.out.println("vehicle name: "+tum_tum.Vehicle_name);
+System.out.println("vehicle number: "+tum_tum.Vehicle_number);
+System.out.println("vehicle brand : "+tum_tum.Vehicle_brand);
+System.out.println("vehicle price: "+tum_tum.Vehicle_price);
+System.out.println("vehicle color: "+tum_tum.Vehicle_color);
+System.out.println(" ");
+System.out.println("Thank You For Select tum tum Vehicle");
+System.out.println(" ");
+
+break;
+
+ case 3:
+         Vehicle   chota_hathi = new  Auto_rikshaw("chota hathi","mh06e9006","plagaglo",230000,"brown");
+         System.out.println(" ");
+         System.out.println("!!!!...Chota Hathi Details...!!!!");
+         System.out.println(" ");
+         System.out.println("vehicle name: "+chota_hathi.Vehicle_name);
+System.out.println("vehicle number: "+chota_hathi.Vehicle_number);
+System.out.println("vehicle brand : "+chota_hathi.Vehicle_brand);
+System.out.println("vehicle price: "+chota_hathi.Vehicle_price);
+System.out.println("vehicle color: "+chota_hathi.Vehicle_color);
+System.out.println(" ");
+System.out.println("Thank You For Select chota hathi Vehicle");
+System.out.println(" ");
+
+break;
+
+         default: System.out.println("Enter Valid Number");
+         break;
+}
+     
+Scanner sc6 = new Scanner(System.in);
+    System.out.println(" ");
+    break;
+    
+  case 3:
+   
+System.out.println(" ");
+System.out.println("!!!!...Select Vehicle Type...!!!!");
+System.out.println(" ");
+System.out.println("Enter 1 For petrol");
+System.out.println("Enter 2 For Diesel " );
+System.out.println("Enter 3 For Electric");
+System.out.println(" ");
+
+ int num3= sc4.nextInt();
+     
+       
+ 
+switch(num3)
+{
+         
+   case 1:
+   System.out.println(" ");
+   System.out.println("!!!!...Select Your Favourite Car...!!!!");
+   System.out.println(" ");
+   System.out.println("Enter 1 For vitara brezza");
+System.out.println("Enter 2 For wagonr " );
+System.out.println("Enter 3 For alto");
+System.out.println(" ");
+
+      
+    int num4= sc4.nextInt();
+     
+       
+ 
+switch(num4)  
+{
+      case 1 :
+          Vehicle   vitara_brezza  = new  Vitara_brezza("vitara brezza","mh16e9456","petrol car",1300000,"grey");
+          System.out.println(" ");
+          System.out.println("!!!!...Car Details...!!!!");
+          System.out.println(" ");
+          System.out.println("vehicle name: "+vitara_brezza.Vehicle_name);
+System.out.println("vehicle number: "+vitara_brezza.Vehicle_number);
+System.out.println("vehicle brand : "+vitara_brezza.Vehicle_brand);
+System.out.println("vehicle price: "+vitara_brezza.Vehicle_price);
+System.out.println("vehicle color: "+vitara_brezza.Vehicle_color);
+System.out.println(" ");
+System.out.println("Thank You For Select Vitara brezza Vehicle");
+System.out.println(" ");
+         break;
+         
+         case 2 :
+          Vehicle   wagonr  = new  Wagonr("wagonr","mh17he9400","petrol car",400000,"grey-silver");
+          System.out.println(" ");
+          System.out.println("!!!!...Car Details...!!!!");
+          System.out.println(" ");
+          System.out.println("vehicle name: "+wagonr.Vehicle_name);
+System.out.println("vehicle number: "+wagonr.Vehicle_number);
+System.out.println("vehicle brand : "+wagonr.Vehicle_brand);
+System.out.println("vehicle price: "+wagonr.Vehicle_price);
+System.out.println("vehicle color: "+wagonr.Vehicle_color);
+System.out.println(" ");
+System.out.println("Thank You For Select wagonr Vehicle");
+System.out.println(" ");
+         break;
+         
+           case 3 :
+          Vehicle   alto  = new  Alto("alto","mh09e8956","petrol car",450000,"grey-silver");
+          System.out.println(" ");
+          System.out.println("!!!!...Car Details...!!!!");
+          System.out.println(" ");
+          System.out.println("vehicle name: "+alto.Vehicle_name);
+System.out.println("vehicle number: "+alto.Vehicle_number);
+System.out.println("vehicle brand : "+alto.Vehicle_brand);
+System.out.println("vehicle price: "+alto.Vehicle_price);
+System.out.println("vehicle color: "+alto.Vehicle_color);
+System.out.println(" ");
+System.out.println("Thank You For Select alto Vehicle");
+System.out.println(" ");
+         break;
+         
+           default: System.out.println("Enter Valid Number");
+         break;
+}
+
+ Scanner sc7 = new Scanner(System.in);
+    System.out.println(" ");
+    break;
+    
+  case 2:
+   
+System.out.println(" ");
+System.out.println("!!!!...Select Your Favourite Car...!!!!");
+System.out.println(" ");
+System.out.println("Enter 1 For innova");
+System.out.println("Enter 2 For swift dzire " );
+System.out.println("Enter 3 For safari");
+System.out.println(" ");
+
+ int num5= sc4.nextInt();
+     
+       
+ 
+switch(num5)
+{
+      case 1:
+          Vehicle   innova  = new  Innova("Innova","mh10ae0456","Diesel car",1200000,"grey");
+          System.out.println(" ");
+          System.out.println("!!!!...Car Details...!!!!");
+          System.out.println(" ");
+          System.out.println("vehicle name: "+innova.Vehicle_name);
+System.out.println("vehicle number: "+innova.Vehicle_number);
+System.out.println("vehicle brand : "+innova.Vehicle_brand);
+System.out.println("vehicle price: "+innova.Vehicle_price);
+System.out.println("vehicle color: "+innova.Vehicle_color);
+System.out.println(" ");
+System.out.println("Thank You For Select innova Vehicle");
+System.out.println(" ");
+         break;
+         
+           case 2 :
+ Vehicle   swift_dezire  = new Swift_dezire("swift dezire","mh17he9400","diesel  car",400000,"grey-silver");
+ System.out.println(" ");
+  System.out.println("!!!!...Car Details...!!!!");
+          System.out.println(" ");
+       System.out.println("vehicle name: "+swift_dezire.Vehicle_name);
+System.out.println("vehicle number: "+swift_dezire.Vehicle_number);
+System.out.println("vehicle brand : "+swift_dezire.Vehicle_brand);
+System.out.println("vehicle price: "+swift_dezire.Vehicle_price);
+System.out.println("vehicle color: "+swift_dezire.Vehicle_color);
+System.out.println(" ");
+System.out.println("Thank You For Select wagonr Vehicle");
+System.out.println(" ");
+         break;
+         
+           case 3 :
+          Vehicle   safari  = new  Safari("tata safari","mh09e8956","diesel car",750000,"silver");
+          System.out.println(" ");
+           System.out.println("!!!!...Car Details...!!!!");
+          System.out.println(" ");
+          System.out.println("vehicle name: "+safari.Vehicle_name);
+System.out.println("vehicle number: "+safari.Vehicle_number);
+System.out.println("vehicle brand : "+safari.Vehicle_brand);
+System.out.println("vehicle price: "+safari.Vehicle_price);
+System.out.println("vehicle color: "+safari.Vehicle_color);
+System.out.println(" ");
+System.out.println("Thank You For Select safari Vehicle");
+System.out.println(" ");
+         break;
+         
+           default: System.out.println("Enter Valid Number");
+         break;
+}
+       
+       
+        Scanner sc8= new Scanner(System.in);
+    System.out.println(" ");
+    break;
+    
+case 3:
+   System.out.println(" ");
+    System.out.println("!!!!...Select Your Favourite Car...!!!!");
+     System.out.println(" ");
+System.out.println("Enter 1 For tata nexon");
+System.out.println("Enter 2 For tata EV " );
+System.out.println("Enter 3 For Tesla model s");
+System.out.println(" ");
+
+ int num6= sc4.nextInt();
+     
+       
+ 
+switch(num6)
+{
+      case 1:
+          Vehicle   tata_nexon  = new  Tata_nexon("nexon","mh18ae0406","electric car",1200000,"grey-black");
+          System.out.println(" ");
+          System.out.println("!!!!...Car Details...!!!!");
+          System.out.println(" ");
+          System.out.println("vehicle name: "+tata_nexon.Vehicle_name);
+System.out.println("vehicle number: "+tata_nexon.Vehicle_number);
+System.out.println("vehicle brand : "+tata_nexon.Vehicle_brand);
+System.out.println("vehicle price: "+tata_nexon.Vehicle_price);
+System.out.println("vehicle color: "+tata_nexon.Vehicle_color);
+System.out.println(" ");
+System.out.println("Thank You For Select nexon Vehicle");
+System.out.println(" ");
+         break;
+         
+           case 2 :
+ Vehicle   tata_ev = new Tata_EV("Ev","mh26df9400","electric  car",900000,"grey-silver");
+ System.out.println(" ");
+ System.out.println("!!!!...Car Details...!!!!");
+          System.out.println(" ");
+       System.out.println("vehicle name: "+tata_ev.Vehicle_name);
+System.out.println("vehicle number: "+tata_ev.Vehicle_number);
+System.out.println("vehicle brand : "+tata_ev.Vehicle_brand);
+System.out.println("vehicle price: "+tata_ev.Vehicle_price);
+System.out.println("vehicle color: "+tata_ev.Vehicle_color);
+System.out.println(" ");
+System.out.println("Thank You For Select EV Vehicle");
+System.out.println(" ");
+         break;
+         
+           case 3 :
+          Vehicle   tesla_model_s  = new  Tesla_Model_S("tesla model s","mh09lk0956","tesla car",2500000,"silver");
+          System.out.println(" ");
+          System.out.println("!!!!...Car Details...!!!!");
+          System.out.println(" ");
+          System.out.println("vehicle name: "+tesla_model_s.Vehicle_name);
+System.out.println("vehicle number: "+tesla_model_s.Vehicle_number);
+System.out.println("vehicle brand : "+tesla_model_s.Vehicle_brand);
+System.out.println("vehicle price: "+tesla_model_s.Vehicle_price);
+System.out.println("vehicle color: "+tesla_model_s.Vehicle_color);
+System.out.println(" ");
+System.out.println("Thank You For Select tesla Vehicle");
+System.out.println(" ");
+         break;
+         
+           default: System.out.println("Enter Valid Number");
+         break;
+}
+}
+        
+        Scanner sc9= new Scanner(System.in);
+    System.out.println(" ");
+    break;
+    
+case 4:
+
+   System.out.println(" ");
+    System.out.println("!!!!...Select Your Favourite Truck...!!!!");
+     System.out.println(" ");
+System.out.println("Enter 1 For Bharat Benz 1923C Tipper");
+System.out.println("Enter 2 For Ashok Leyland Ecomet 1615 HE Truck " );
+System.out.println("Enter 3 For Mahindra Furio 16 Truck");
+System.out.println("Enter 4 For Bus");
+System.out.println(" ");
+
+ int num7= sc4.nextInt();
+     
+       
+ 
+switch(num7)
+{
+   case 1:
+         Vehicle   bharat_benz_1923C_tipper   = new  Bharat_Benz_1923C_Tipper("Bharat Benz 1923C Tipper","mh45t9056","bharat benz",2600000,"brown");
+         System.out.println(" ");
+          System.out.println("!!!!...Truck Details...!!!!");
+           System.out.println(" ");
+         System.out.println("vehicle name: "+bharat_benz_1923C_tipper.Vehicle_name);
+System.out.println("vehicle number: "+bharat_benz_1923C_tipper.Vehicle_number);
+System.out.println("vehicle brand : "+bharat_benz_1923C_tipper.Vehicle_brand);
+System.out.println("vehicle price: "+bharat_benz_1923C_tipper.Vehicle_price);
+System.out.println("vehicle color: "+bharat_benz_1923C_tipper.Vehicle_color);
+System.out.println(" ");
+System.out.println("Thank You For Select Bharat Benz 1923C Tipper Vehicle");
+System.out.println(" ");
+        break;
+        
+        case 2 :
+ Vehicle   ashok_leyland_ecomet1615_HE_truck  = new Ashok_Leyland_Ecomet_1615_HE_Truck ("Ashok Leyland Ecomet 1615 HE Truck ","mh34df8400","ashok leyland ",2900000,"grey-brown");
+ System.out.println(" ");
+ System.out.println("!!!!...Truck Details...!!!!");
+           System.out.println(" ");
+       System.out.println("vehicle name: "+ashok_leyland_ecomet1615_HE_truck.Vehicle_name);
+System.out.println("vehicle number: "+ashok_leyland_ecomet1615_HE_truck.Vehicle_number);
+System.out.println("vehicle brand : "+ashok_leyland_ecomet1615_HE_truck.Vehicle_brand);
+System.out.println("vehicle price: "+ashok_leyland_ecomet1615_HE_truck.Vehicle_price);
+System.out.println("vehicle color: "+ashok_leyland_ecomet1615_HE_truck.Vehicle_color);
+System.out.println(" ");
+System.out.println("Thank You For Select ashok_leyland_ecomet1615_HE_truck Vehicle");
+System.out.println(" ");
+         break;
+         
+           case 3 :
+          Vehicle   mahindra_furio_16_truck  = new Mahindra_Furio_16_Truck("mahindra_furio_16_truck","mh43k9006","mahindra",2900000,"brown");
+          System.out.println(" ");
+          System.out.println("!!!!...Truck Details...!!!!");
+           System.out.println(" ");
+          System.out.println("vehicle name: "+mahindra_furio_16_truck.Vehicle_name);
+System.out.println("vehicle number: "+mahindra_furio_16_truck.Vehicle_number);
+System.out.println("vehicle brand : "+mahindra_furio_16_truck.Vehicle_brand);
+System.out.println("vehicle price: "+mahindra_furio_16_truck.Vehicle_price);
+System.out.println("vehicle color: "+mahindra_furio_16_truck.Vehicle_color);
+System.out.println(" ");
+System.out.println("Thank You For Select mahindra_furio_16_truck Vehicle");
+System.out.println(" ");
+         break;
+         
+             case 4 :
+          Vehicle   bus  = new Bus("bus","mh46k9096","L&T",1900000,"yellow");
+          System.out.println(" ");
+          System.out.println("!!!!...Bus Details...!!!!");
+           System.out.println(" ");
+          System.out.println("vehicle name: "+bus.Vehicle_name);
+System.out.println("vehicle number: "+bus.Vehicle_number);
+System.out.println("vehicle brand : "+bus.Vehicle_brand);
+System.out.println("vehicle price: "+bus.Vehicle_price);
+System.out.println("vehicle color: "+bus.Vehicle_color);
+System.out.println(" ");
+System.out.println("Thank You For Select bus Vehicle");
+System.out.println(" ");
+         break;
+         
+           default: System.out.println("Enter Valid Number");
+         break;
+}
+
+break;
+        
+      case 5: 
+      System.out.println(" ");
+      System.out.println("Home Page");
+      System.out.println(" ");
+        break;
+        
+         default: System.out.println("please enter valid number");
+         break;
+     }
+     
+     System.out.println(" ");
+     System.out.println("Would you like to visit 1)Yes/2)No");
+     System.out.println(" ");
+     int n2 = sc4.nextInt();
+     if(n2==1)
+     {
+     	System.out.println(" ");
+     System.out.println("Enter 1 For Two wheeler");
+          System.out.println("Enter 2 For Three wheeler");
+System.out.println("Enter 3 For Four wheeler");
+System.out.println("Enter 4 For Six wheeler");
+System.out.println("Enter 5 For main page");
+System.out.println(" ");
+ num = sc4.nextInt();
+     }
+     else if(n2==2)
+     {
+     	System.out.println("Thanks to visit Abhishek showroom..!!!!!!");
+     	break;
+     }
+          
+     /*
+     
+        {
+        owner_details refrence =new owner_details();
+       //owner_details();
+       System.out.println("Owner details:-");
+       System.out.println("owner name =" + refrence.getOwner_Name());
+       System.out.println("owner number =" + refrence.getOwner_Mob_Number());
+    //  Activa ref=new Activa();
+    
+    System.out.println("Thank You For Visiting Our Showroom");
+       
+        
+    }
+    */
+     
+     }
+    }
+}
